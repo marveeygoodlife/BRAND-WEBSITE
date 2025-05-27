@@ -32,6 +32,7 @@ padding: 0;
   --clr-2:#000066;/* deep navy blue */
   --clr-3:#003399; /* navy blue */
   --clr-4:#6699FF; /* baby blue */
+  --clr-6:#6699ff4a; /* baby blue */
   --clr-5:#99FFFF; /* ice blue */
   --text-color-dark:#000000 ;
   --max-width:1170px;
@@ -58,6 +59,22 @@ padding: 0;
 h1, .container p {
   color: white;
 }
+.order{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 3rem;
+}
+#spanh1 {
+  display: block;
+  color: #003399;
+  font-weight: bolder;
+  font-size: 1em;
+}
+
 img {
   display: block;
   width: 100%;
@@ -121,7 +138,7 @@ img {
   margin-top: 1rem;
     border: 2px solid rgb(255, 255, 255);
     display: inline-block;
-    background: var(--clr-4);
+    background: var(--clr-1);
     color: white;
     padding: 0.375rem .75rem;
     text-transform: uppercase;
@@ -161,10 +178,18 @@ img {
 section {
   padding-bottom: 3rem;
 }
+
+span {
+  font-weight:bolder;
+  color:
+  black;
+}
 #about,#service,#contact {
   height: auto;
 }
 main {
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 1rem 1.5rem;
 }
 article p {
@@ -179,14 +204,14 @@ p {
   padding-bottom: .876rem;
 }
 .article-content {
-  background: var(--clr-4);
+  background: var(--clr-6);
   padding: 10px;
   transition: var(--transition);
   border-radius: 10px;
   box-shadow: var(--light-shadow);
 }
 .active {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .article-content:hover {
  transform: scale(1.10);
@@ -228,9 +253,51 @@ a.show-link {
     transform: scale(1);
  } 
 }
- 
-footer {
+ #service-btndiv{
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+ }
+ #goals{
   margin-top: 2rem;
+ }
+
+ #service-btn{
+  box-shadow: var(--light-shadow);
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  color: #000000;
+  padding: .345em 1em;  background: var(--clr-1);
+text-decoration: underline;
+transition: var(--transition);
+ }
+ #date {
+  color: white;
+ }
+ .plink {
+  color: white;
+ }
+ #service-btn:hover{
+  box-shadow: var(--dark-shadow);
+  transform: scale(1);
+  color: white;
+  }
+footer {
+  color: white;
+  margin-top: 2rem;
+  background: #333;
+  text-align: center;
+}
+div.p  {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 1rem;
 }
 
 /* media queries */
@@ -276,5 +343,10 @@ background: transparent;
     font-size: 1.2rem;
     padding: 1rem 1.55rem;
     margin-top: 1.5rem;
+  }
+  div#aboutcontent{
+display: grid;
+grid-template-columns: repeat(2 1fr);
+grid-template-columns: auto;
   }
 }
