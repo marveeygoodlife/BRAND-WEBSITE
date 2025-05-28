@@ -5,7 +5,7 @@
 This Website is my personal brand website, where I'll showcase to visitors the services that I can offer to them. These services are listed below;
 
 - It'll show to visitor my services such as, Website-Development, Graphic-designs, General printing services, Logo, banners and brand creation.
-- Document formatting, letter writting, creation of professional CV's, Cover letters and Resumes.
+- Document formatting, letter writing, creation of professional CV's, Cover letters and Resumes.
 -Additionally, promotion of my Website Development & Basic Computer Training(MS-Office, Typing & Internet) services.
 -Attraction & Conversion of visitors using CTA's (e.g Register Now)
 _Build Trust by showcasing testimonials, images & / videos.

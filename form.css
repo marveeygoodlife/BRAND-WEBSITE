@@ -32,7 +32,7 @@ border: 2px solid #1E2A38;
 input, select {
     padding: .5rem;
  }
-input:hover, select:hover, button:focus {
+input:hover, select:hover, button:hover {
 box-shadow: 0 0 2px 2px #d4af372c;
 }
 input[type="date"] {
@@ -50,6 +50,10 @@ input[type="date"] {
 fieldset {
     margin: 0;
     border:  none;
+}span {
+    color:
+    #000066;
+    text-transform: capitalize;
 }
 .fieldset1 {
     margin-bottom: 1.2rem;
@@ -180,8 +184,7 @@ label#flexlabel, .flexa  {
     .formp {
         font-size: 1.2em;
     }
-  /*   input, select, button {
-     } */
+ 
     
     #flexlabel {
 
