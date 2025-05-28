@@ -50,7 +50,7 @@ padding: 0;
  body {
   color: var(--dark-color);
   background-color: var(--background-color);
-    font: normal 300 1rem / 1.5 "Lato";
+    font: normal 300 1rem / 1.6 "Lato";
   }
   header {
        min-height: 100vh;
@@ -168,7 +168,7 @@ h1 {
 }
 /* MAIN CONTENt */
 section {
-  padding-bottom: 3rem;
+  padding: 50px 20px;
 }
  
 #about,#service,#contact {
@@ -338,6 +338,7 @@ box-shadow: 0 5px 10px #00339944;
 }
 /* contact form */
 textarea {
+  margin-top: .655rem;
   width: 100%;
 }
 
