@@ -8,7 +8,7 @@
 
 #### navigation objective
 
-Here I am going to dynamically get the links container height using Element.getBoundingClientRect() method to return the element height, so that the links height is calculated based on the number of links that I have on the navigation bar. wITHOUT getting the height automatically, I may face issues of having to manually update the height anytime I add or remove a navlink. Here's how to fix it;
+Here I am going to dynamically get the links container height using Element.getBoundingClientRect() method to return the element height, so that the links height is calculated based on the number of links that I have on the navigation bar. Without getting the height automatically, I may face issues of having to manually update the height anytime I add or remove a navlink. Here's how to fix it;
 
 #### solution
 
@@ -18,7 +18,7 @@ Here I am going to dynamically get the links container height using Element.getB
 - then create var for the container div & ul heights
 -use getBoundingClientRect().height to get height
 - check if containerHeight === 0, if yes linkscontainer.style.height = `${linkHeight}.px`; else 
-linkscontainer.style.height = 0`;
+linkscontainer.style.height = 0;
 THis function will automatically get the height & remove it when needed.
 
 ### Set the date to update dynamically
