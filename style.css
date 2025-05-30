@@ -35,20 +35,28 @@ padding: 0;
   --clr-4:#6699FF; /* baby blue */
   --clr-6:#6699ff4a; /* baby blue */
   --clr-5:#99FFFF; /* ice blue */
-  --text-color-dark:#000000 ;
-  --max-width:1170px;
+  --text-color:#000000 ;
+   --max-width:1170px;
   --transition: all .3s  linear;
   --light-shadow:0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow:0 5px 15px rgba(0, 0, 0, 0.2);
 
  }
+ .dark-mode {
+  --background-color: #1e2041c2;
+  --text-color:#ffffff;
+  --dark-color:#1A1A1A;
+  --clr-2:#ffffff;
+ }
+ /* dark mode */
+ 
  html {
     scroll-behavior: smooth;
     font-size: 100%;
  }
   /* GENERAL STYLE */
  body {
-  color: var(--dark-color);
+  color: var(--text-color);
   background-color: var(--background-color);
     font: normal 300 1rem / 1.6 "Lato";
   }
@@ -82,6 +90,11 @@ h1 {
   color: var(--clr-2);
     font-family: Montserrat;
 }
+.contenth2 {
+  text-wrap-mode: nowrap ;
+  margin: 0;
+  padding: 0;
+}
   /* NAVIGATION */
   .links-container {
     height: 0;
@@ -98,12 +111,12 @@ h1 {
     display: flex;
   }
   
-  ul li {
+  nav ul li {
     display: block;
     text-transform: capitalize;
     list-style-type: none;
   }
-  ul li a {
+  nav ul li a {
     width: 100%;
     color: #000066;
     font-weight: bolder;
@@ -115,7 +128,7 @@ h1 {
     padding: 0.75rem 0;
     letter-spacing: var(--spacing);
   }
-  ul li a:hover {
+  nav ul li a:hover {
     text-decoration: none;
     padding-left: 1.5rem;
   }
@@ -158,7 +171,7 @@ h1 {
 }
 .togglebutton{
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   background: transparent;
   border: transparent;
   transition: var(--transition);
@@ -175,6 +188,7 @@ section {
   height: auto;
 }
 main {
+  padding: 10px;
   display: grid;
   grid-template-columns: 1fr;
   padding: 1rem 1.5rem;
@@ -188,26 +202,22 @@ p {
 }
 .digital-ol li {
   margin-left: 1.1rem;
-  padding-bottom: .876rem;
+  padding : 3px;
+}
+.mbottom {
+  margin:0 10px 0;
 }
 .article-content {
   background: var(--clr-6);
-  padding: 20px;
+  padding: 10px;
     position: relative;
-  text-align: center;
+  text-align: justify;
   width: 100%;
+  height: auto;
   transition: var(--transition);
-  border-radius: 30%;
   box-shadow: var(--light-shadow);
 }
- .contentol, li{
-  margin: 0 1rem;
-  padding: 0 10px;
-  letter-spacing: var(--spacing);
- }
-.active {
-  margin-bottom: 4rem;
-}
+
 .article-content:hover {
  transform: var(--scale);
   box-shadow: var(--dark-shadow);
@@ -275,7 +285,7 @@ a.show-link {
 
   display: block;
   font-size: 1rem;
-  color: #000000;
+  color: var(--text-color);
   padding: .345em 1em;  
   background: var(--clr-6);
 text-decoration: underline;
@@ -290,24 +300,62 @@ transition: var(--transition);
 footer {
   color: white;
   margin-top: 2rem;
-  background: #333;
-  text-align: center;
+   text-align: center;
   padding: 1.5rem 1rem;
 }
- 
+.two-column {
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+ grid-template-rows: auto;
+ text-align: left;
+  gap: 10px;
+  margin-bottom: 2rem;
+ }
+ .two-column h2 {
+  font-size: 1.111rem;
+   text-wrap-mode: nowrap;
+  text-align: left;
+ }
+ .footer-links a {
+   color: var(--text-color);
+  font-size: 1em;
+  text-transform: capitalize;
+  text-decoration: none;
+   transition: var(--transition);
+ }
+  .footer-links a:hover {
+    text-decoration: underline;
+      color: var(--clr-2);
+  }
+  .footer-links {
+    display: block;
+  }
+   .footer-links li {
+      list-style-type: none;
+   margin-bottom: .576rem;
+  }
+  .p p {
+    color: var(--text-color);
+  }
+
 div.p  {
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
   flex-direction: column;
   padding-bottom: 1rem;
+  text-transform: capitalize;
 }
 #date {
-  color: white;
+  color: var(--text-color);
  }
  .plink {
-  color: white;
+  color:  rgb(107, 67, 67);
+ }
+ .plink:hover {
+  color: var(--dark-color);
  }
 /* image style */
 .mgl-img-container{
@@ -332,7 +380,7 @@ box-shadow: 0 5px 10px #00339944;
 }
 .mgl-img-container figcaption{
   margin-top: 12px;
-  color: #333;
+  color: var(--text-color);
   font-size: 0.95rem;
   font-weight: 500;
 }
@@ -341,13 +389,33 @@ textarea {
   margin-top: .655rem;
   width: 100%;
 }
-
+ .mission-statement{
+text-align: left;
+}
 /* media queries */
 
 @media  screen and (min-width: 800px) {
   /* nav style */
   nav {
 background: transparent;  
+
+}
+h1 {
+  font-size: 5em;
+
+}
+.container p {
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 60rem;
+ }
+ main p {
+  max-width: 90rem;
+  font-size: 1.2rem;
+  text-align: center;
+ }
+h4 {
+  font-size:1.2rem
 }
     .nav-center {
       width: 90vw;
@@ -366,20 +434,23 @@ background: transparent;
    .links-container {
         height: auto !important;
     }
-      ul  {
+   nav   ul  {
     display: flex;
   }
-   ul li a {
+  nav ul li a {
     font-weight: bold;
      font-size: 1.5rem;
      padding: 0;
      background: transparent;
      margin: 0 1rem;
   }
-  ul li a:hover {
+  nav ul li a:hover {
     padding:0;
     background:transparent;
     text-decoration: underline;
+  }
+  ol.digital-ol li {
+    font-size: 1.2;
   }
   a.btn {
     font-size: 1.2rem;
@@ -387,8 +458,53 @@ background: transparent;
     margin-top: 1.5rem;
   }
   div#aboutcontent{
-display: grid;
-grid-template-columns: repeat(2 1fr);
-grid-template-columns: auto;
+    display: flex;
+    column-gap: 10px;
+    flex-direction: row;
+    height:auto ;
+    justify-content: center;
+    align-items: center;
   }
+  /* main */
+    .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      margin: 0 auto;
+   }
+  .mission-statement{
+ line-height: 1.7; 
+padding-bottom: 5px;
+font-size: 1.2em;
+}
+.digital-ol li {
+ font-size: 1.2em;
+ 
+}
+   #goals {
+     line-height: 1.6; 
+     padding-bottom: .88em;
+    margin-top: 1rem;
+    height: auto;
+   }
+   main {
+     
+  display: unset;
+  grid-template-columns: unset;
+  padding: 1rem 1.5rem;
+}
+/* footer */
+.two-column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+ text-align: left;
+ }
+ .two-column h2 {
+  font-size: 1.399rem;
+  text-align: centlefter;
+ }
+ 
 }

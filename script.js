@@ -8,8 +8,10 @@ const btn = document.querySelector(".togglebutton");
 const linksContainer = document.querySelector(".links-container");
 const nav = document.querySelector("#nav");
 const topScroll = document.querySelector(".top-link");
- console.log(topScroll)
- console.log(nav)
+const darkModeBtn = document.querySelector("#darkmode");
+let darkModeClass = document.querySelector(".fa-moon")
+console.log(darkModeClass)
+
 /* set date */
 date.innerHTML = new Date().getFullYear();
 /* nav toggle */
@@ -40,4 +42,17 @@ window.addEventListener("scroll", ()=>{
   } else {
         topScroll.classList.remove("show-link")
   }
+})
+
+window.addEventListener('DOMContentLoaded', () => {
+   darkModeBtn.addEventListener('click', ()=> {
+const body = document.documentElement;
+if (   darkModeClass.classList('fa-moon')) {
+   body.classList.toggle("dark-mode");
+   darkModeClass.classList.add('fa-sun');
+
+} else {
+   
+};
+ })
 })

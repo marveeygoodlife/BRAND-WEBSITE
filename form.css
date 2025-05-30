@@ -51,6 +51,7 @@ fieldset {
     margin: 0;
     border:  none;
 }span {
+    font-size: 1.2em;
     color:
     #000066;
     text-transform: capitalize;
