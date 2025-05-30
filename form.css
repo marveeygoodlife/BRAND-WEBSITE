@@ -50,11 +50,6 @@ input[type="date"] {
 fieldset {
     margin: 0;
     border:  none;
-}span {
-    font-size: 1.2em;
-    color:
-    #000066;
-    text-transform: capitalize;
 }
 .fieldset1 {
     margin-bottom: 1.2rem;

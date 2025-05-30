@@ -7,8 +7,8 @@
         <meta name="description" content="This is a computer training school, that specialize in education and teaching of digital skills, web develoment and computer literacy">
         <meta name="keyword" content="digital printing, website development, Html, Css, Javascript, computer training, MS office, typing">
         <link rel="stylesheet" href="style.css">
-<!--           <link rel="stylesheet" href="css/all.min.css">
- -->    <link rel="stylesheet" href="form.css">
+        <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="form.css">
         <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
@@ -20,7 +20,7 @@
     />
   
     <link rel="stylesheet" href="images/weblogo_Images/mgl-logo.css">
-        <title>MGL Tech Hub | Home</title>
+        <title>MGL Tech Hub | Contact Us</title>
     </head>
    <body id="body">
         <!-- header -->
@@ -39,7 +39,22 @@ viewBox="0 0 3439.58 661.46"
  </g>
 </svg>
 <!-- darkmode -->
-<a aria-label="nav togglebutton" id="darkmode"><i class="fas fa-moon"></i></a>
+ <div class="toggle-container" id="themeToggle">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="grey" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </div>
 <!-- nav toggle -->     
  <a aria-label="nav togglebutton" class="togglebutton"><i class="fas fa-bars"></i></a></div>
           
@@ -49,8 +64,8 @@ viewBox="0 0 3439.58 661.46"
                     <li><a href="index.html" class="scroll-link">home</a></li>
                     <li><a href="index.html#about" class="scroll-link">about</a></li>
                     <li><a href="index.html#service" class="scroll-link">service</a></li>
-                    <li><a href="./course.html"  target="_blank">courses</a></li>
-                    <li><a href="./contact.html" class="scroll-link">contact</a></li>
+                    <li><a href="./course.html"  target="_parent">courses</a></li>
+                    <li><a href="./contact.html" class="scroll-link" target="_parent">contact</a></li>
                 </ul>
              </div>
             </div>
@@ -118,48 +133,78 @@ viewBox="0 0 3439.58 661.46"
                     </div>
             </article>
          </section>
+         <section class="map">
+            <div class="title"><h2>Locate us here</h2></div>
+             <!-- map -->
+          <div class="my-map"> 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1009057.1045440112!2d7.2520211!3d8.914010499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1748635949741!5m2!1sen!2sng" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="map" title="MGL tech Hub Location"></iframe>
+          </div>
+         </section>
+         <!--  -->
+         <section>
+            <div>
+                <a href="https://wa.me/2347053902558" id="whatsapp"  > <i class="fa-brands fa-whatsapp"></i></a>
+     </div>
+         </section>
+          
+        
     </main>
 
     <!-- footer section -->
+    
     <footer>
-      <div class="2column">
+         <hr>
+      <div class="two-column">
   <!-- NAV LLINKS -->
-   <hr>
+  
              <div class="foooter-links-container">
                 <div class="footer-title">
               <h2>about</h2>
-              </div>
+             
                 <ul class="footer-links">
-                     <li><a href="./index.html#about" class="scroll-link">about us</a></li>
+                     <li><a href="#about" class="scroll-link">about us</a></li>
                      <li><a href="course.html"  target="_blank">courses</a></li>
                     <li><a href="contact.html" class="scroll-link">contact us</a></li>
                 </ul>
+                 </div>
              </div>
              <!-- help and guid4e -->
              <div class="foooter-links-container">
                 <div class="footer-title">
               <h2>help & guide</h2>
-              </div>
                 <ul class="footer-links">
                      <li><a href="#" class="scroll-link">term of use</a></li>
                     <li><a href="#" class="scroll-link">privacy policy</a></li>
                     <li><a href="#"  target="_blank">FAQ</a></li>
-                    
                 </ul>
+                 </div>
              </div>
 
-     </div>
+     </div> 
+     <hr>
+ <div class="socials">
+    <a href="https://x.com/marveeygoodlife" class="social-icon" ><i class="fa-brands fa-twitter" aria-label="twitter" title="Twitter"></i></a>
 
+    <a href="" class="social-icon" ><i class="fa-brands fa-linkedin" aria-label="linkedin" title="LinkedIn"></i></a>
+    <a href="" class="social-icon" ><i class="fa-brands fa-facebook" aria-label="facebook" title="Facebook"></i></a>
+    <a href="https://www.instagram.com/mgltechhub/?hl=en" aria-label="instagram" title="Instagram" class="social-icon" ><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://github.com/marveeygoodlife" aria-label="github" title="GitHub" class="social-icon" ><i class="fa-brands fa-github"></i>
+</a>
+ </div>
 <hr>
      <!-- author info -->
         <div class="p">
-            <p>copyright &copy; MGL Tech Hub <span id="date"></span> .all right reserved</p>
-        <p>Built with love ❤️ by <a href="https://www.linkedin.com/in/marvellous-ediagbonya-064b50147/" target="_blank" rel="noopener" class="plink">Marveey Goodlife</a></p>
+            <p>
+            Built with love ❤️ by <a href="https://www.linkedin.com/in/marvellous-ediagbonya-064b50147/" target="_blank" rel="noopener" class="plink">Marveey Goodlife</a>
+        </p>
+        <br>
+         <p> &copy; MGL Tech Hub <span id="date"></span> .all right reserved
+            </p>
         </div>
          
     </footer>
              <!-- sroll to top button -->
-          <a href="#body" class="scroll-link top-link  " aria-label="Scroll to toppage"><i class="fas fa-arrow-up"></i></a>
+          <button href="#body" type="button" class="scroll-link top-link  " aria-label="Scroll to toppage"><i class="fas fa-arrow-up"></i></button>
          <!-- javascript -->
          <script src="script.js"></script>
    </body>

@@ -7,14 +7,33 @@ const ul = document.querySelector('.links');
 const btn = document.querySelector(".togglebutton");
 const linksContainer = document.querySelector(".links-container");
 const nav = document.querySelector("#nav");
-const topScroll = document.querySelector(".top-link");
-const darkModeBtn = document.querySelector("#darkmode");
-let darkModeClass = document.querySelector(".fa-moon")
-console.log(darkModeClass)
+const topScroll = document.querySelector("#top-link");
+const body = document.documentElement;
 
 /* set date */
 date.innerHTML = new Date().getFullYear();
-/* nav toggle */
+
+/* check for user theme preference in local storage */
+const themeToggle = document.getElementById("themeToggle");  
+const currentTheme = localStorage.getItem('theme');
+   if (currentTheme) {
+      body.classList.add(currentTheme);
+   }
+
+ 
+window.addEventListener('DOMContentLoaded', () => { 
+   
+ themeToggle.addEventListener("click", ()=>{
+   body.classList.toggle('dark-mode');
+   /* save user prefered color scheme to local storage
+    */
+   if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark-mode")
+   } else {
+            localStorage.setItem("theme", "");
+   }
+ })
+ /* scroll to top */
 btn.addEventListener('click', ()=>{
     const linksHeight = ul.getBoundingClientRect().height;
     const containerHeight = linksContainer.getBoundingClientRect().height;
@@ -25,14 +44,10 @@ btn.addEventListener('click', ()=>{
          linksContainer.style.height = 0;
        }
 });
-
-/* scroll to top */
-//listen for scroll on windows
-// get window height
-//get nav height
-// show link if height > 500
+})
 
 window.addEventListener("scroll", ()=>{
+   console.log("topnav link active 0")
   const scrollHeight = window.pageYOffset;
   const navheight = nav.getBoundingClientRect().height;
 
@@ -44,15 +59,4 @@ window.addEventListener("scroll", ()=>{
   }
 })
 
-window.addEventListener('DOMContentLoaded', () => {
-   darkModeBtn.addEventListener('click', ()=> {
-const body = document.documentElement;
-if (   darkModeClass.classList('fa-moon')) {
-   body.classList.toggle("dark-mode");
-   darkModeClass.classList.add('fa-sun');
 
-} else {
-   
-};
- })
-})

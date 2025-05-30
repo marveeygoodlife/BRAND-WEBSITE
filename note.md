@@ -51,3 +51,12 @@ I will add a navbar that automatically appear and remain fixed when the page scr
 #### select links
 
 #### add dark mode
+
+ --clr-1:#00CCFF;/*skyblue */
+  --clr-2:#000066;/* deep navy blue */
+  --clr-3:#003399; /* navy blue */
+  --clr-4:#6699FF; /* baby blue */
+  --clr-6:#6699ff4a; /* baby blue */
+  --clr-5:#99FFFF; /* ice blue*/
+  --text-color:#000000
+  
