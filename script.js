@@ -47,8 +47,7 @@ btn.addEventListener('click', ()=>{
 })
 
 window.addEventListener("scroll", ()=>{
-   console.log("topnav link active 0")
-  const scrollHeight = window.pageYOffset;
+   const scrollHeight = window.pageYOffset;
   const navheight = nav.getBoundingClientRect().height;
 
 

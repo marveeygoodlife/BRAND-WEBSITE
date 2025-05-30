@@ -84,8 +84,7 @@ padding: 0;
   --color-link-hover:#82B1FF;
 
   /* tooplink */
-  --top-link:#FFC107
-;
+  --top-link:#FFC107;
  }
  .toggle-container {
   cursor: pointer;
@@ -152,7 +151,7 @@ h1 {
     font-family: Montserrat;
 }
 .contenth2 {
-  text-wrap-mode: nowrap ;
+  white-space: nowrap ;
   margin: 0;
   padding: 0;
 }
@@ -310,7 +309,7 @@ button#top-link {
 button#top-link:hover {
   color: var(--color-surface);
 }
-button#show-link {
+button.show-link {
    visibility: visible;
   z-index: 3000;
 }
@@ -627,7 +626,7 @@ font-size: 1.2em;
  }
  .two-column h2 {
   font-size: 1.399rem;
-  text-align: centlefter;
+  text-align: center;
  }
  
 }
