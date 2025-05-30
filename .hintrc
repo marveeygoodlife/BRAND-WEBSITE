@@ -9,6 +9,15 @@
       {
         "select-name": "off"
       }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "text-wrap-mode",
+          "text-wrap-mode: nowrap"
+        ]
+      }
     ]
   }
 }
