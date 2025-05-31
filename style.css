@@ -250,7 +250,7 @@ h1 {
 section {
   padding: 50px 20px;
 }
- 
+
 #about,#service,#contact {
   height: auto;
 }
@@ -463,7 +463,7 @@ text-align: left;
   gap: 2rem;
   justify-content: center;
 }
-.social-icon {
+a.social-icon {
 display: inline-flex;
 align-items: center;
 justify-content: center;
@@ -476,10 +476,16 @@ overflow: hidden;
 text-decoration: none;
 }
 .fa-github {
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
   background-color: #333333;
   color: white;
 }
 .fa-instagram{
+   border-radius: 50%;
+  padding: 0;
+  margin: 0;
   background: radial-gradient(circle at 30% 107%, 
     #fdf497 0%, #fdf497 5%, #fd5949 45%, 
     #d6249f 60%, #285AEB 90%);
@@ -488,10 +494,16 @@ text-decoration: none;
 .fa-facebook{
   background-color: #1877F2;
   color: white;
+   border-radius: 50%;
+  padding: 0;
+  margin: 0;
 }
 .fa-linkedin {
   background-color: #0A66C2;
   color: white;
+   border-radius: 50%;
+  padding: 0;
+  margin: 0;
 }
 
 /* social icons color */
