@@ -2,7 +2,7 @@
 /* get elements */
 /* add event listener */
 /* calculate height and fix it to nav */
-const date = document.getElementById("myDate");
+const myDate = document.getElementById("myDate");
 const ul = document.querySelector('.links');
 const btn = document.querySelector(".togglebutton");
 const linksContainer = document.querySelector(".links-container");
@@ -11,7 +11,7 @@ const topScroll = document.querySelector("#top-link");
 const body = document.documentElement;
 
  /* set date */
-date.innerHTML = new Date().getFullYear();
+myDate.innerHTML = new Date().getFullYear();
 
 /* check for user theme preference in local storage */
 const themeToggle = document.getElementById("themeToggle");  

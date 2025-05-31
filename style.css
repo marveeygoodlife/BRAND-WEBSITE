@@ -208,6 +208,7 @@ h1 {
   .fixed-navbar {
     position: fixed;
     top: 0;
+    z-index: 1000000000;
     left: 0;
     width: 100%;
     box-shadow: var(--dark-shadow);
