@@ -2,7 +2,7 @@
 /* get elements */
 /* add event listener */
 /* calculate height and fix it to nav */
-const date = document.getElementById("date");
+const date = document.getElementById("myDate");
 const ul = document.querySelector('.links');
 const btn = document.querySelector(".togglebutton");
 const linksContainer = document.querySelector(".links-container");
@@ -10,7 +10,7 @@ const nav = document.querySelector("#nav");
 const topScroll = document.querySelector("#top-link");
 const body = document.documentElement;
 
-/* set date */
+ /* set date */
 date.innerHTML = new Date().getFullYear();
 
 /* check for user theme preference in local storage */
@@ -49,13 +49,20 @@ btn.addEventListener('click', ()=>{
 window.addEventListener("scroll", ()=>{
    const scrollHeight = window.pageYOffset;
   const navheight = nav.getBoundingClientRect().height;
+ 
 
-
-  if (scrollHeight > 500) {
+  if (scrollHeight > 1000) {
      topScroll.classList.add("show-link")
-  } else {
+   } else {
         topScroll.classList.remove("show-link")
   }
+
+ /* add fixed nav */
+ if (scrollHeight > navheight) {
+   nav.classList.add('fixed-navbar');
+ } else {
+   nav.classList.remove('fixed-navbar');
+ }
 })
 
 
