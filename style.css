@@ -48,7 +48,8 @@ padding: 0;
   /* links color */
   --color-link:#4A90E2;
   --color-link-hover:#2C73B8;
-
+/* warning */
+--warning: #F44336;
   --scale:scale(1.010);
   --dark-color:#1A1A1A;
      --spacing:0.1rem;
@@ -56,7 +57,8 @@ padding: 0;
   --transition: all .3s  linear;
   --light-shadow:0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow:0 5px 15px rgba(0, 0, 0, 0.2);
-
+/* tooplink */
+  --top-link-color:#FFC107;
  }
  /* dark-mode */
  .dark-mode {
@@ -84,7 +86,7 @@ padding: 0;
   --color-link-hover:#82B1FF;
 
   /* tooplink */
-  --top-link:#FFC107;
+  --top-link-color:#FFC107;
  }
  .toggle-container {
   cursor: pointer;
@@ -147,7 +149,7 @@ h1 {
   text-transform: uppercase;
   padding: 1rem 0;
   text-align: center;
-  color: var(--color-text-primary);
+  color: var(--top-link-color);
     font-family: Montserrat;
 }
 .contenth2 {
@@ -203,6 +205,15 @@ h1 {
    min-height: 100vh;
    text-align: center;
   }
+  .fixed-navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000000000;
+    left: 0;
+    width: 100%;
+    box-shadow: var(--dark-shadow);
+    background: var(--color-bg);
+  }
 /* button style */
  a.btnwhite, button#button {
   margin-top: 1rem;
@@ -249,7 +260,7 @@ h1 {
 section {
   padding: 50px 20px;
 }
- 
+
 #about,#service,#contact {
   height: auto;
 }
@@ -289,10 +300,10 @@ p {
   box-shadow: var(--dark-shadow);
 }
 /* top link */
-button#top-link {
+a.top-link { 
   z-index: -100;
   text-decoration: none;
-  background: var(--top-link);
+  background: var(--top-link-color);
   border-radius: 50%;
   color: var(--color-surface);
   cursor: pointer;
@@ -303,13 +314,13 @@ button#top-link {
   display: grid;
   place-content: center;
   position: fixed;
-  right: 3rem;
-  bottom: 3rem;
+  right: 20px;
+  bottom: 5rem;
 }
-button#top-link:hover {
+a.top-link:hover {
   color: var(--color-surface);
 }
-button.show-link {
+a.show-link {
    visibility: visible;
   z-index: 3000;
 }
@@ -365,6 +376,9 @@ transition: var(--transition);
   }
   /* foooter style */
 footer {
+  position: static;
+  bottom: 0;
+  width: 100%;
    margin-top: 2rem;
    text-align: center;
   padding: 1.5rem 1rem;
@@ -459,7 +473,7 @@ text-align: left;
   gap: 2rem;
   justify-content: center;
 }
-.social-icon {
+a.social-icon {
 display: inline-flex;
 align-items: center;
 justify-content: center;
@@ -472,10 +486,16 @@ overflow: hidden;
 text-decoration: none;
 }
 .fa-github {
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
   background-color: #333333;
   color: white;
 }
 .fa-instagram{
+   border-radius: 50%;
+  padding: 0;
+  margin: 0;
   background: radial-gradient(circle at 30% 107%, 
     #fdf497 0%, #fdf497 5%, #fd5949 45%, 
     #d6249f 60%, #285AEB 90%);
@@ -484,10 +504,16 @@ text-decoration: none;
 .fa-facebook{
   background-color: #1877F2;
   color: white;
+   border-radius: 50%;
+  padding: 0;
+  margin: 0;
 }
 .fa-linkedin {
   background-color: #0A66C2;
   color: white;
+   border-radius: 50%;
+  padding: 0;
+  margin: 0;
 }
 
 /* social icons color */
@@ -497,25 +523,50 @@ section.map {
   place-items: center;
 }
   iframe {
+    min-width: 300px;
+    max-width: 100%;
+    height: auto;
   border: 4px solid #2C73B8;
 }
-#whatsapp {
+.call-button {
+  text-decoration: none;
+    background-color: var(--color-bg-secondary);
+  color: var(--top-link-color);
+  padding: 5px 15px;
+  display: none;
+  font-weight: bold;
+  position: fixed;
+  font-size: 1.2rem;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  right: 0;
+  z-index: 1000;
+}
+.whatsappBtn {
   position: fixed;
   cursor: pointer;
-  bottom: 5rem;
+  bottom: 20rem;
   right: 20px;
-/*   background-color: #25D366;
-  color: white; */
- 
   border-radius: 50%;
   font-size: 44px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2,);
-  z-index: 1000;
+  visibility: hidden;
+  z-index: -1000;
   text-decoration: none;
   animation: bounce .3s ease-in-out infinite;
 }
+.show-whatsapp {
+ visibility: visible;
+  z-index: 1000;
+}
 
 /* media queries */
+@media screen and  (max-width:799px) {
+  .call-button{
+    display: block;
+  }
+}
 @media  screen and (min-width: 800px) {
   /* nav style */
   nav {

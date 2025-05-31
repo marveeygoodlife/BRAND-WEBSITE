@@ -7,12 +7,12 @@ form#myform {
     transition: box-shadow .3s ease;
 }
 form#myform:hover {
-      box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.5);
 }
 /* input style */
 input { 
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-input-border);
     border-radius: 4px;
     box-sizing: border-box;
     height: 35px;
@@ -21,25 +21,25 @@ input {
     padding: .6em;
 }
 ::placeholder{
-    color: var(--bg-color);
+    color: var(--color-text-muted);
     font-family: inherit;
     font-size: .99rem;
 font-weight: 500; 
 }
 input:focus, select:focus, button:focus {
-border: 2px solid #1E2A38;
+border: 2px solid var( --color-input-border);
 }
 input, select {
     padding: .5rem;
  }
 input:hover, select:hover, button:hover {
-box-shadow: 0 0 2px 2px #d4af372c;
+box-shadow: 0 0 2px 2px var( --light-shadow);
 }
 input[type="date"] {
     margin-bottom: 1.1rem;
 }
 .error-message {
-    color: #87CEEB;
+    color: var(--warning);
     font-size: .60em;
     font-weight: bold;
     margin-top: 4px;
@@ -90,7 +90,7 @@ label, legend {
     margin: 0;
     padding: 0;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: bold;
 
  }
 .flexlabel input {
@@ -111,12 +111,11 @@ select {
     margin-bottom: 1.1rem;
     box-sizing: border-box;
     background-color: #fff;
-    border: 1px solid #ccc;
-    color: #333;
+    border: 1px solid var(--color-input-border);
     height: 35px;
  }
  select option {
-    background-color: #333;
+    background-color: var(--dark-color);
     color: #fff;
 }
  select.studentoption, select#regprogram, select#country, select#duration  {
@@ -137,7 +136,9 @@ select {
     margin-top: 1rem;
  }
 /*=====FORM STYLE END===== */
- 
+ .red {
+    color: red;
+ }
  
 .flexa {
     margin: auto .4em;
@@ -158,16 +159,12 @@ label#flexlabel, .flexa  {
     fieldset ul.form-grid {
         width: 100%;
     }   
-   /*  input, select {
-        padding: .7rem;
-     } */
     label, legend {
          font-size: 1.1em;
      }
     #flexlabel {
         font-size: 1rem;
       }
-    
     .error-message {
       
         font-size: 1em;
@@ -176,12 +173,9 @@ label#flexlabel, .flexa  {
     ::placeholder {
         font-size: 1.1em;
     }
-    
     .formp {
         font-size: 1.2em;
     }
- 
-    
     #flexlabel {
 
         font-size: unset;

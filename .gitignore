@@ -1,0 +1,22 @@
+# Node modules folder (huge, should NOT be in repo)
+node_modules/
+
+# Environment variables file (contains secrets)
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+ 
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files (optional, depending on what you use)
+.vscode/
+.idea/
