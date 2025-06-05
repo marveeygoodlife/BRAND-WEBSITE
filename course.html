@@ -21,17 +21,17 @@
     <link rel="stylesheet" href="images/weblogo_Images/mgl-logo.css">
     <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
         <title>MGL Tech Hub | Course Registration</title>
-        <style>
+        <!-- <style>
             header {
                 min-height: unset;
                 background: unset;
             }
-        </style>
+        </style> -->
     </head>
    <body id="body">
         <!-- header -->
-    <header>
-        <nav>
+    <header class="nobanner">
+        <nav id="nav">
             <div class="nav-center">
                 <div class="nav-header">
 <?xml-stylesheet href="mgl-logo.css" type="text/css"?>
@@ -83,7 +83,7 @@ viewBox="0 0 3439.58 661.46"
          <section id="contact" class="section" > 
                 <article class="content">
                     <div class="mainContainer">
-    <form id="myform" method="post" aria-label="Enrollment Form">
+    <form id="myform" action="/post" method="post" aria-label="Enrollment Form">
     <h2> Join Our Computer & Web Development Training</h2>
     <p class="formp">
 Learn essential computer skills and build real websites from scratch. Whether you're a complete beginner or looking to grow your tech knowledge, this course will guide you every step of the way. Fill out the form below to enroll 
@@ -161,7 +161,7 @@ Learn essential computer skills and build real websites from scratch. Whether yo
         <span class="red">*</span> 
     </legend>
     
-    <select id="regprogram" aria-labelledby="registerError">
+    <select id="registerprogram" aria-labelledby="registerError">
     <option value=" " selected disabled>Select Option</option>
     <option value="Career/Resume">Build my Career/Resume</option>
     <option value="For Company">Fulfill my Company Requirements</option>

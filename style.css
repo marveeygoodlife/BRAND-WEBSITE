@@ -24,7 +24,7 @@ padding: 0;
     src: url(fonts/Montserrat-ExtraBold.ttf);
     font-weight: 900;
 }
-/* light mode */
+/* light mode  color palette*/
  :root {
  /* background color */
   --color-bg:#FFFFFF ;
@@ -60,7 +60,7 @@ padding: 0;
 /* tooplink */
   --top-link-color:#FFC107;
  }
- /* dark-mode */
+ /* dark-mode  color palette*/
  .dark-mode {
    /* background color */
   --color-bg:#121212 ;
@@ -91,8 +91,8 @@ padding: 0;
  .toggle-container {
   cursor: pointer;
  }
+
  /* sun and moon icon style */
-  
  .sun-icon, .moon-icon {
   width: 24px;
   height: 24px;
@@ -110,7 +110,7 @@ padding: 0;
  .dark-mode .moon-icon {
   display: inline-block;
  }
- /* ====dark mode end ====*/
+ /* ====dark mode  style end ====*/
  
  html {
     scroll-behavior: smooth;
@@ -127,6 +127,11 @@ padding: 0;
   header {
        min-height: 100vh;
     background: linear-gradient( hsla(204, 100%, 96%, 0.483),rgba(0,0,0,0.7)), url(./images/teacherteachingcomp.jpeg) center/cover no-repeat;
+  }
+  .nobanner {
+    min-height: unset;
+                background: unset;
+            
   }
 /* HEADING */
 h1, .container p {
@@ -257,12 +262,13 @@ h1 {
 .togglebutton:hover {
   transform: rotate(360deg);
 }
-/* MAIN CONTENt */
+/* nav style end  */
+
+/* MAIN CONTENT STYLE START*/
 section {
   padding: 50px 20px;
   margin-bottom: 1rem;
 }
-
 #about,#service,#contact {
   height: auto;
 }
@@ -325,6 +331,7 @@ a.show-link {
    visibility: visible;
   z-index: 3000;
 }
+/* animation */
 @keyframes bounce {
  0% {
     transform: scale(1);
@@ -336,7 +343,7 @@ a.show-link {
     transform: scale(1);
  } 
 }
-/* animation */
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -432,7 +439,6 @@ grid-template-columns: repeat(2, 1fr);
    margin-bottom: .576rem;
   }
   
-
 div.p  {
   text-align: center;
   display: flex;
@@ -535,9 +541,9 @@ text-decoration: none;
   padding: 0;
   margin: 0;
 }
+/* social icons color  end*/
 
-/* social icons color */
-/* contact section */
+/* contact section style */
 section.map {
   display: grid;
   place-items: center;
@@ -581,7 +587,7 @@ section.map {
   z-index: 1000;
 }
 
-/* media queries */
+/* media queries for Tablet devices */
 @media screen and  (max-width:768px) {
   .call-button{
     display: block;
@@ -596,6 +602,8 @@ section.map {
     font-size: 1rem;
    }
 }
+
+/* media queries for Laptop  devices */
 @media  screen and (min-width: 1024px) {
   /* nav style */
   nav {
