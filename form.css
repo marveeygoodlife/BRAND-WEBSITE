@@ -1,12 +1,12 @@
  /* FORM STYLE */
-form#myform {
+form#myform, #contactform {
     border-radius: 5px;
      max-width: 600px;
     margin: 2rem auto;
     padding: 1.5rem;
     transition: box-shadow .3s ease;
 }
-form#myform:hover {
+form#myform:hover, #contactform:hover {
       box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.5);
 }
 /* input style */

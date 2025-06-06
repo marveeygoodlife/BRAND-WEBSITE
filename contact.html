@@ -101,21 +101,21 @@ viewBox="0 0 3439.58 661.46"
                     </p> 
                     <!-- contact form -->
                     <div class="formContainer">
-    <form id="myform" method="post" aria-label="Enrollment Form">
+    <form id="contactform"  action="/post" method="post" aria-label="Enrollment Form">
 
     <!-- FIELDSET 1 -->
 <fieldset class="fieldset1" id="fieldset1">
      <ul id="form-grid">
     <li class="mtop">
-        <label for="firstname">Full Name:</label>
-        <input type="text" name="fullname" id="firstname" placeholder="Your Name"   autocomplete="name"   aria-labelledby="firstnameError" >
-        <div id="firstnameError" class="error-message" aria-live="polite"></div>
+        <label for="fullname">Full Name:</label>
+        <input type="text" name="fullname" id="fullname" placeholder="Your Name"   autocomplete="name"   aria-labelledby="fullnameError" >
+        <div id="fullnameError" class="error-message" aria-live="polite"></div>
     </li>
     <!-- email -->
      <li>
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Your Email"   autocomplete="email" inputmode="email" aria-describedby="emailError">
-        <div id="emailError" class="error-message" aria-live="polite"></div>
+        <label for="contactemail">Email:</label>
+        <input type="email" name="contactemail" id="contactemail" placeholder="Your Email"   autocomplete="email" inputmode="email" aria-describedby="contactemailError">
+        <div id="contactemailError" class="error-message" aria-live="polite"></div>
     </li>
     </ul>
 </fieldset>
@@ -125,9 +125,10 @@ viewBox="0 0 3439.58 661.46"
         <label for="connect">
         How can MGL Tech Hub assist you?
         </label>
-        <textarea name="message" id="message" rows="5" placeholder="Type Your message here">   </textarea>
+        <textarea name="message" id="contactmessage" rows="5" placeholder="Type Your message here" aria-describedby="contactmessageError">   </textarea>
+         <div id="contactmessageError" class="error-message" aria-live="polite"></div>
     </fieldset>
-    <button type="submit" id="button">
+    <button type="submit" id="contactbutton">
         Talk to us
     </button>
     </form>
@@ -216,7 +217,7 @@ viewBox="0 0 3439.58 661.46"
             Built with love ❤️ by <a href="https://www.linkedin.com/in/marvellous-ediagbonya-064b50147/" target="_blank" rel="noopener" class="plink">Marveey Goodlife</a>
         </p>
         <br>
-         <p> &copy; MGL Tech Hub <span id="myDate"></span> .all right reserved
+         <p> &copy; MGL Tech Hub <span class="mydate" id="myDate"></span> .all right reserved
             </p>
         </div>
          

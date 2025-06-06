@@ -222,7 +222,7 @@ h1 {
     background: var(--color-bg);
   }
 /* button style */
- a.btnwhite, button#button {
+ a.btnwhite, button#button, button#contactbutton {
   margin-top: 1rem;
     border: 2px solid rgba(255, 255, 255, 0.316);
     display: inline-block;
@@ -241,7 +241,7 @@ h1 {
     transform: scale(1.05);
     background: var(--color-accent-hover);
    }
-   .btn, button#button {
+   .btn, button#button, button#contactbutton {
         outline: 1px solid var(--clr-4);
         padding: 1rem 1.5rem;
         border-radius: 0;

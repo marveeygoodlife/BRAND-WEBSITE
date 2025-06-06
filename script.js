@@ -2,7 +2,8 @@
 /* get elements */
 /* add event listener */
 /* calculate height and fix it to nav */
-const myDate = document.getElementById("myDate");
+const myDate = document.querySelectorAll("mydate");
+console.log(myDate)
 const ul = document.querySelector('.links');
 const btn = document.querySelector(".togglebutton");
 const linksContainer = document.querySelector(".links-container");
@@ -118,7 +119,7 @@ firstnameError.textContent = "Enter firstname";
   valid = false;
   return;
  }
-if (!lastname) {
+if (!lastname) { 
 lastnameError.textContent ="Enter Lastname";
    valid = false;
    return;
@@ -182,3 +183,59 @@ if (valid) {
 
 });
 } 
+
+/* contact form */
+const contactform = document.getElementById("contactform");
+const contactbutton = document.getElementById("contactbutton");
+
+if (contactform) {
+document.getElementById("contactform").addEventListener("submit", (e)=>{
+   e.preventDefault();
+
+
+  const fullname = document.getElementById("fullname").value.trim(); const fullnameError = document.getElementById("fullnameError"); 
+
+  const contactemail = document.getElementById("contactemail").value.trim(); const contactemailError = document.getElementById("contactemailError"); 
+
+  const contactmessage = document.getElementById("contactmessage").value.trim(); 
+  const contactmessageError = document.getElementById("contactmessageError");
+
+  /* blank display */   
+  contactemailError.textContent = ""
+; contactmessageError.textContent=""; fullnameError.textContent = "";
+
+if (!fullname) {
+   fullnameError.textContent = "Please enter your fullname"
+   valid = false;
+   return;
+}
+if (!contactemail) {
+   contactemailError.textContent = "Please enter your email address"
+   valid = false;
+   return;
+}
+if (!contactmessage) {
+   contactmessageError.textContent = "Please include a short message"
+   valid = false;
+   return;
+}
+ const contactData = {
+   fullname,
+   contactemail,
+   contactmessage,
+ }
+ console.log("contactData", contactData);
+ if (valid) {
+   contactform.submit();
+ }
+
+   })
+}
+
+
+/* SMOOTH SCROLL */
+
+
+
+
+
