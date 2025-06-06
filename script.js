@@ -2,7 +2,7 @@
 /* get elements */
 /* add event listener */
 /* calculate height and fix it to nav */
-const myDate = document.querySelectorAll("mydate");
+const myDate = document.querySelector("mydate");
 console.log(myDate)
 const ul = document.querySelector('.links');
 const btn = document.querySelector(".togglebutton");

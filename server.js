@@ -13,10 +13,7 @@ app.use(express.static(__dirname));
 app.use(express.urlencoded({extended: true}));
 
 /* connect database */
-mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser:true,
-    useUinfiedTopology: true,
-});
+mongoose.connect(process.env.MONGODB_URI);
 const db = mongoose.connection;
 db.once("open", ()=>{
     console.log("DATABASE CONNECTION SUCCESSFUL");
@@ -45,8 +42,7 @@ const newUsers = mongoose.model("data", userSchema);
 /* get static files to serve as webpage */
 app.get("/", (req, res)=>{
     res.sendFile(path.join(__dirname, "course.html"));
-    res.send("hello from nodemon + node")
-})
+ })
 
 /* send user data input to database */
 
@@ -69,7 +65,7 @@ console.log("date ", Date, "=>", new Date(startDate))
         role,
         jobyears,
         internshipduration, 
-        Date: new Date(startDate), 
+        startDate: new Date(startDate), 
         registerprogram, 
         country,
         knowus, 
