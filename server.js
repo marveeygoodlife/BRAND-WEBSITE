@@ -8,12 +8,14 @@ const port = 6090;
 /* creat express app */
 const app = express();
 
-/* serve static html */
-app.use(express.static(__dirname));
+/* serve static html files from public folder */
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: true}));
 
 /* connect database */
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI)
+.then(()=>console.log('MongoDB connected'))
+.catch(err => console.log('MongoDB connection error', err));
 const db = mongoose.connection;
 db.once("open", ()=>{
     console.log("DATABASE CONNECTION SUCCESSFUL");

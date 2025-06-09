@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head id="home">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Marvellous Ediagbonya">
         <meta name="description" content="This is a computer training school, that specialize in education and teaching of digital skills, web develoment and computer literacy">
         <meta name="keyword" content="digital printing, website development, Html, Css, Javascript, computer training, MS office, typing">
-        <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-<link rel="manifest" href="favicon_io/site.webmanifest">
+        <link rel="shortcut icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/favicon_io/site.webmanifest">
 <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="images/weblogo_Images/mgl-logo.css">
+    <link rel="stylesheet" href="/form.css">
+    <link rel="stylesheet" href="/images/weblogo_Images/mgl-logo.css">
     <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
         <title>MGL Tech Hub | Course Registration</title>
         <!-- <style>
@@ -31,10 +31,10 @@
    <body id="body">
         <!-- header -->
     <header class="nobanner">
-        <nav id="nav">
+        <nav id="nav" role="navigation">
             <div class="nav-center">
                 <div class="nav-header">
-<?xml-stylesheet href="mgl-logo.css" type="text/css"?>
+<?xml-stylesheet href="/assets/mgl-logo.css" type="text/css"?>
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="34.3958mm" height="6.6146mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
 viewBox="0 0 3439.58 661.46"
  xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -68,28 +68,28 @@ viewBox="0 0 3439.58 661.46"
             <!-- NAV LLINKS -->
              <div class="links-container">
                 <ul class="links">
-                    <li><a href="index.html" class="scroll-link">home</a></li>
-                    <li><a href="index.html#about" class="scroll-link">about</a></li>
-                    <li><a href="index.html#service" class="scroll-link">service</a></li>
-                    <li><a href="./course.html"  target="_parent">courses</a></li>
-                    <li><a href="./contact.html" class="scroll-link" target="_parent">contact</a></li>
+                    <li><a href="/index.html" class="scroll-link" role="link">home</a></li>
+                    <li><a href="/index.html#about"  role="link">about</a></li>
+                    <li><a href="/index.html#service"  role="link">service</a></li>
+                    <li><a href="#contact" class="scroll-link" target="_parent" role="link">courses</a></li>
+                    <li><a href="/contact.html"  target="_parent" role="link">contact</a></li>
                 </ul>
              </div>
             </div>
         </nav>
     </header>
         <!-- main content-->
-    <main>
+    <main role="main">
          <section id="contact" class="section" > 
-                <article class="content">
+                <article class="content" role="article">
                     <div class="mainContainer">
-    <form id="myform" action="/post" method="POST" aria-label="Enrollment Form">
+    <form id="myform" action="/post" method="POST" aria-label="Enrollment Form" role="form">
     <h2> Join Our Computer & Web Development Training</h2>
     <p class="formp">
 Learn essential computer skills and build real websites from scratch. Whether you're a complete beginner or looking to grow your tech knowledge, this course will guide you every step of the way. Fill out the form below to enroll 
 </p>
     <!-- FIELDSET 1 -->
-    <fieldset class="fieldset1">
+    <fieldset class="fieldset1" >
      <ul class="form-grid">
     <li class="mtop">
         <label for="firstname">First Name:</label>
@@ -426,12 +426,12 @@ Learn essential computer skills and build real websites from scratch. Whether yo
         <input type="text" name="knowus" id="connect" placeholder="Please share the name" inputmode="kana-name" required> 
     </label>
      <label id="flexlabel">  
-        <input type="checkbox" name="terms" class="checkbox"   id="terms" aria-labelledby="checkError">I have read and accept all <a href="#" class="flexa"> terms </a> & <a href="#"> policies </a> of MGL Tech Hub.
+        <input type="checkbox" name="terms" class="checkbox"   id="terms" aria-labelledby="checkError" role="checkbox">I have read and accept all <a href="#" class="flexa" role="link"> terms </a> & <a href="#" role="link"> policies </a> of MGL Tech Hub.
      </label>
      <div id="checkError" class="error-message" aria-live="polite"></div>
      <hr>
      <div role="alert" aria-live="assertive" id="error-message">Please fill out all required fields.</div>
-    <button type="submit" id="button"  class="btn">
+    <button type="submit" id="button"  class="btn" role="button">
         Submit Enrollment
     </button>
     </form>
@@ -442,27 +442,24 @@ Learn essential computer skills and build real websites from scratch. Whether yo
     </main>
     
     <!-- footer section -->
-    <footer>
+    <footer role="contentinfo"  class="section">
          <hr>
       <div class="two-column">
   <!-- NAV LLINKS -->
   
              <div class="foooter-links-container">
                 <div class="footer-title">
-              <h2>about</h2>
+              <h2 role="heading">about</h2>
              
                 <ul class="footer-links">
-                     <li>
-                        <a href="index.html" class="scroll-link">Home</a>
+                     <li role="listitem">
+                        <a href="/index.html#about"  role="link">about us</a>
                     </li>
-                     <li>
-                        <a href="index.html#about" class="scroll-link">about us</a>
+                     <li role="listitem">
+                        <a href="/course.html" target="_parent" role="link">courses</a>
                     </li>
-                     <li>
-                        <a href="./course.html"  target="_parent">courses</a>
-                    </li>
-                    <li>
-                        <a href="./contact.html" target="_parent">contact us</a>
+                    <li role="listitem">
+                        <a href="/contact.html"  target="_parent" role="link">contact us</a>
                     </li>
                 </ul>
                  </div>
@@ -470,52 +467,52 @@ Learn essential computer skills and build real websites from scratch. Whether yo
              <!-- help and guid4e -->
              <div class="foooter-links-container">
                 <div class="footer-title">
-              <h2>help & guide</h2>
+              <h2 role="heading">help & guide</h2>
                 <ul class="footer-links">
-                     <li><a href="#" class="scroll-link">term of use</a></li>
-                    <li><a href="#" class="scroll-link">privacy policy</a></li>
-                    <li><a href="#"  target="_blank">FAQ</a></li>
+                     <li role="listitem"><a href="#"  role="link">term of use</a></li>
+                    <li role="listitem"><a href="#"  role="link">privacy policy</a></li>
+                    <li role="listitem"><a href="#"  target="_blank" role="link">FAQ</a></li>
                 </ul>
                  </div>
              </div>
-
      </div>
-      <hr>
+     <hr>
  <div class="socials">
     <a href="https://x.com/marveeygoodlife" class="social-icon" title="Twitter">
-        <i class="fa-brands fa-twitter" aria-label="twitter" ></i>
+        <i class="fa-brands fa-twitter" aria-label="twitter" role="link" ></i>
     </a>
-    <a href=""  class="social-icon"  title="LinkedIn">
+    <a href="https://www.linkedin.com/in/marvellous-ediagbonya-064b50147/"  class="social-icon"  title="LinkedIn" role="link">
         <i class="fa-brands fa-linkedin" aria-label="linkedin"></i>
     </a>
-    <a href="" class="social-icon" title="Facebook">
+    <a href="" class="social-icon" title="Facebook" role="link">
         <i class="fa-brands fa-facebook" aria-label="facebook" ></i>
     </a>
-    <a href="https://www.instagram.com/mgltechhub/?hl=en" aria-label="instagram" title="Instagram" class="social-icon" >
+    <a href="https://www.instagram.com/mgltechhub/?hl=en" aria-label="instagram" title="Instagram" class="social-icon" role="link">
         <i class="fa-brands fa-instagram"></i>
     </a>
-    <a href="https://github.com/marveeygoodlife" aria-label="github" title="GitHub"  class="social-icon" ><i class="fa-brands fa-github"></i>
+    <a href="https://github.com/marveeygoodlife" aria-label="github" title="GitHub"  class="social-icon" role="link"><i class="fa-brands fa-github"></i>
     </a>
  </div>
-<hr>
+ 
      <!-- author info -->
-        <div class="p">
+        <div class="authorInfo" role="doc-credit" >
             <p>
-            Built with love ❤️ by <a href="https://www.linkedin.com/in/marvellous-ediagbonya-064b50147/" target="_blank" rel="noopener" class="plink">Marveey Goodlife</a>
+            Built with love ❤️ by <a href="https://www.linkedin.com/in/marvellous-ediagbonya-064b50147/" target="_blank" rel="noopener" class="plink" role="link">Marveey Goodlife</a>
         </p>
-        <br>
-         <p> &copy; MGL Tech Hub <span class="mydate" id="myDate"></span> .all right reserved            </p>
+        <br class="br">
+         <p> 
+            &copy; MGL Tech Hub <span id="myDate" class="mydate"></span> .all right reserved
+          &trade;
+        </p>
         </div>
-         
-    </footer>
-           <!-- sroll to top button -->
+     </footer>
+             <!-- sroll to top button -->
               <div>
-          <a href="#body" class="scroll-link top-link" aria-label="Scroll to toppage" id="top-link" title="scroll to top">
+          <a href="#home" class="scroll-link top-link" aria-label="Scroll to toppage" id="top-link" title="scroll to top">
             <i class="fas fa-arrow-up"></i>
-        </a>
+          </a>
           </div>
               <!--Start of Tawk.to Script-->
-
           <div>
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -531,6 +528,6 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 </div>
          <!-- javascript -->
-         <script src="script.js"></script>
+         <script src="/index.js"></script>
    </body>
 </html>

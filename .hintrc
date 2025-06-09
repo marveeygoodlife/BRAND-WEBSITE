@@ -18,6 +18,14 @@
           "text-wrap-mode: nowrap"
         ]
       }
+    ],
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "iframe[loading]"
+        ]
+      }
     ]
   }
 }
