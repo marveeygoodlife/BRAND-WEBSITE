@@ -271,6 +271,11 @@ section {
 
 #mission, #goals, #vision {
    border-radius: 1rem;
+   text-align: center;
+   padding: 1rem;
+ }
+#mission p, #goals li, #vision p {
+   max-width: 30rem;
 }
 #mission h2, #goals h2, #vision h2 {
 margin-top: 1rem;}
@@ -501,11 +506,7 @@ text-align: left;
   margin: 1rem;
  }
  /* social icons */
-/* .socials { 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+
 a.social-icon {
  overflow: hidden;
 text-decoration: none;
@@ -515,13 +516,14 @@ text-align: left;
 .footer-links li {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
 }
 i.fa-brands {
-  width: 30px;
+  width: 25px;
    display: inline-flex;
  align-items: center;
 justify-content: center;
- height: 30px;
+ height: 25px;
 border-radius: 50%;
 text-align: center;
 margin-right:.59rem;
@@ -728,6 +730,7 @@ h4 {
 }
 #mission, #goals, #vision {
   flex: 1;
+  text-overflow: hidden;
  }
  #vision, #mission {
    margin-bottom: 0;
