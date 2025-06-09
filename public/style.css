@@ -193,7 +193,7 @@ h1 {
   }
   nav ul li a {
     width: 100%;
-     font-weight: bolder;
+     font-weight: bold;
     font-size: 1rem;
     display: block;
     transition: var(--transition);
@@ -228,9 +228,7 @@ h1 {
     display: inline-block;
     background: var(--color-accent);
     color: var(--color-surface);
-    padding: 1rem 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: var(--spacing);
+     letter-spacing: var(--spacing);
     cursor: pointer;
     transition: var(--transition);
      border-radius: .2rem;
@@ -243,8 +241,9 @@ h1 {
    }
    .btn, button#button, button#contactbutton {
         outline: 1px solid var(--clr-4);
-        padding: 1rem 1.5rem;
+    padding: .7rem 1.5rem;
         border-radius: 0;
+        width: 100%;
         color: var(--color-surface);
    }
 
@@ -384,16 +383,12 @@ a.show-link {
 #fieldset2 {
   margin-bottom: 1rem;
 }
- button#button {
-  margin-top: 1rem;
-  margin: 0 auto;
-  min-width: 50%;
- }
+ 
 #service-btn {
       min-width: 250px;
 
 }
- #service-btn, button#button{
+ #service-btn {
   box-shadow: var(--light-shadow);
   cursor: pointer;
       border: 2px solid rgba(255, 255, 255, 0.316);
@@ -419,6 +414,7 @@ footer {
    margin-top: 2rem;
    text-align: center;
   padding: 1.5rem 1rem;
+  height: auto;
 }
 .two-column {
   display: flex;
@@ -511,16 +507,31 @@ text-align: left;
   justify-content: center;
 } */
 a.social-icon {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-width: 40px;
-height: 40px;
-border-radius: 50%;
-font-size: 20px;
- 
-overflow: hidden;
+ overflow: hidden;
 text-decoration: none;
+text-align: left;
+ 
+}
+.footer-links li {
+  display: flex;
+  flex-direction: row;
+}
+i.fa-brands {
+  width: 30px;
+   display: inline-flex;
+ align-items: center;
+justify-content: center;
+ height: 30px;
+border-radius: 50%;
+text-align: center;
+margin-right:.59rem;
+}
+.fa-twitter {
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  background-color: skyblue;
+  color: white;
 }
 .fa-github {
   border-radius: 50%;
@@ -612,6 +623,9 @@ section.map {
   main {
     padding: 2rem;
   }
+    .btn, button#button, button#contactbutton {
+        width:90%;
+    }
    a.btnwhite, button#button, .btn, #service-btn {
     font-size: 1rem;
    }
@@ -624,27 +638,7 @@ section.map {
 background: transparent;  
 
 }
-h1 {
-  font-size: 3.5em;
-
-}
-.container p {
-  font-size: 1.125rem;
-  text-align: center;
-  max-width: 60rem;
- }
- 
- main p {
-  display: block;
-  margin: 0 auto;
-  word-wrap: break-word;
-  max-width: 50rem;
-  font-size: 1.125rem;
-  text-align: center;
- }
-h4 {
-  font-size:1.2rem
-}
+/* NAVIGATION STYLE */
     .nav-center {
       width: 90vw;
       max-width: 1170px;
@@ -666,7 +660,7 @@ h4 {
     display: flex;
   }
   nav ul li a {
-    font-weight: bold;
+    font-weight: bolder;
      font-size: 1.1rem;
      padding: 0;
      background: transparent;
@@ -694,6 +688,33 @@ h4 {
     align-items: center;
   }
   /* main */
+  h1 {
+  font-size: 5em;
+  font-weight: bold;
+ 
+}
+.container p {
+  font-size: 1.125rem;
+  text-align: center;
+  max-width: 60rem;
+ }
+ 
+ main p {
+  display: block;
+  margin: 0 auto;
+  word-wrap: break-word;
+  max-width: 50rem;
+  font-size: 1.125rem;
+  text-align: center;
+ }
+ .btn, button#button, button#contactbutton {
+        width:90%;
+        display: block;
+        margin: 0 auto;
+    }
+h4 {
+  font-size:1.2rem
+}
     .content {
     display: flex;
     flex-direction: column;
@@ -730,16 +751,16 @@ h4 {
 margin-left: 15rem;
  }
 /* footer */
-.two-column {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
- text-align: left;
+.two-column, .footer-links-container {
+  height: auto;
+   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: right;
+  gap: 3rem;
  }
  .two-column h2 {
   font-size: 1.5rem;
-  text-align: center;
+  text-align: left;
  }
  div.authorInfo  {
   text-align: center;
@@ -750,5 +771,10 @@ margin-left: 15rem;
   gap: 1rem;
   text-transform: capitalize;
 }
- 
+/*  .footer-title  {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+} */
 }

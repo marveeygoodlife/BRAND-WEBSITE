@@ -1,22 +1,37 @@
  /* FORM STYLE */
 form#myform, #contactform {
     border-radius: 5px;
-     max-width: 600px;
+     max-width: 700px;
     margin: 2rem auto;
-    padding: 1.5rem;
+    padding: 1rem;
     transition: box-shadow .3s ease;
 }
 form#myform:hover, #contactform:hover {
       box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.5);
 }
 /* input style */
-input { 
+
+/* =====SELECT STYLE========= */
+
+select, input {
     width: 100%;
-    border: 1px solid var(--color-input-border);
-    border-radius: 4px;
+    border-radius: .3rem;
     box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid var(--color-input-border);
     height: 35px;
  }
+ select option {
+    background-color: var(--dark-color);
+    color: #fff;
+}
+ 
+.checkbox {
+    width: unset;
+    margin-right: .4rem;
+}
+/* ===SELECT STYLE END=======*/
+
 #connect {
     padding: .6em;
 }
@@ -24,18 +39,17 @@ input {
     color: var(--color-text-muted);
     font-family: inherit;
     font-size: .99rem;
-font-weight: 500; 
-}
+    padding: 0 0 0 5px;
+ }
 input:focus, select:focus, button:focus {
 border: 2px solid var( --color-input-border);
 }
-input, select {
-    padding: .5rem;
- }
+ 
 input:hover, select:hover, button:hover {
 box-shadow: 0 0 2px 2px var( --light-shadow);
 }
 input[type="date"] {
+    width: 100%;
     margin-bottom: 1.1rem;
 }
 .error-message {
@@ -54,36 +68,22 @@ fieldset {
 .fieldset1 {
     margin-bottom: 1.2rem;
 }
-fieldset ul.form-grid {
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+
+ul  { 
     display: grid;
-    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-columns: 1fr ;
     grid-template-rows: auto;
-    width: fit-content;
-}
-ul li { 
-    display: flex;
-    flex-direction: column;
-    margin: .05em;
-    list-style-type: none;
- }
- ul.companyname {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    gap:.2rem;
     width: 100%;
-    gap: .2rem;
+
  }
-ul.duration {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 1rem;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(2, 1fr);
-}
+ li {
+    list-style-type: none;
+    width: 100%;
+    margin: 1rem auto;
+
+ }
  
 label, legend {
     text-align: left;
@@ -105,31 +105,7 @@ ul.terms   {
 .owner {
     width: 100%;
 }
-/* =====SELECT STYLE========= */
-select {
-    border-radius: .4rem;
-    margin-bottom: 1.1rem;
-    box-sizing: border-box;
-    background-color: #fff;
-    border: 1px solid var(--color-input-border);
-    height: 35px;
- }
- select option {
-    background-color: var(--dark-color);
-    color: #fff;
-}
- select.studentoption, select#regprogram, select#country, select#duration  {
-    width: 100%;
-}
-.checkbox {
-    width: unset;
-    margin-right: .4rem;
-}
-/* ===SELECT STYLE END=======*/
-
-.mtop {
-    margin-top: 0.9em;
-}
+ 
 /*  */
  #flexlabel {
     font-size: .65em;
