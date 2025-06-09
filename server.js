@@ -8,8 +8,8 @@ const port = 6090;
 /* creat express app */
 const app = express();
 
-/* serve static html */
-app.use(express.static(__dirname));
+/* serve static html files from public folder */
+app.use(express.static(__dirname, 'public'));
 app.use(express.urlencoded({extended: true}));
 
 /* connect database */
