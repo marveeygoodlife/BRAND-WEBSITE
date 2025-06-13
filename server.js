@@ -2,9 +2,19 @@ const express = require("express")
 const mongoose = require("mongoose")
 const path = require("path")
 require("dotenv").config()
-
+const nodemailer = require("nodemailer");
 const port = 6090;
 
+
+/* create mail transporter */
+
+const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass:process.env.EMAIL_PASS
+    }
+})
 /* creat express app */
 const app = express();
 
@@ -52,9 +62,6 @@ app.post("/post", async(req, res)=>{
     const  { firstname, lastname, 
          email, telephone, occupation, companyname, role, jobyears, internshipduration, startDate, registerprogram, country, knowus, terms
     } = req.body;
-console.log("Request body", req.body);
-console.log("Telephone", typeof telephone)
-console.log("date ", Date, "=>", new Date(startDate))
 
     try {
         const user = new newUsers({
@@ -73,12 +80,34 @@ console.log("date ", Date, "=>", new Date(startDate))
         knowus, 
         terms : terms === "on" || terms === true
     }); 
+    console.log('Received form data:', req.body);
     await user.save();
     console.log("Saved user", user)
-    res.send("Form submitted, check database")
+    const mailoptions = {
+        from: process.env.EMAIL_USER,
+        to: email,
+        subject: 'Enrollment Confirmation - MGL TECH HUB',
+        html: `
+        <h3> Hi ${firstname},</h3>
+        <p>Thanks for enrolling in our program: <strong>${registerprogram}</strong>.</p>
+        <p>We received your application and our team will contact you shortly</p>
+        <p>Meanwhile, follow us on social media for updates.</p>
+        <p>🌐 <a href="https://mgl-tech-hub.onrender.com/">Visit Website</a></p>
+        <p>All social platforms: @mgltechhub</p>
+        <p> Best regards, <br> MGL Tech HUb Team.❤️</p>
+        `
+    };
+    try {
+        await transporter.sendMail(mailoptions);
+        console.log('Email sent to:', email);
+        res.status(200).send("Saved and email sent");
+    } catch (emailErr) {
+        console.error("Email failed:", emailErr);
+        res.status(500).send('Form saved but email failed.')
+    }
     } catch (error) {
         console.error("Error saving to database", error);
-        res.status(500).send("Failed to save");
+        res.status(500).send("Internal server Error ");
     }
 })
 

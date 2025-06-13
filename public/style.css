@@ -134,13 +134,14 @@ padding: 0;
             
   }
 /* HEADING */
-h1, .container p {
+.container p {
   color: white;
 }
-
 h1 {
+    color: var(--color-text-primary);
   font-size: 2rem;
 }
+
 #spanh1 {
   display: block;
   color: #ffffff;
@@ -155,7 +156,7 @@ h1 {
   font-weight: 900;
   text-transform: uppercase;
    text-align: center;
-  color: var(--top-link-color);
+  color: var(--color-text-primary);
   margin-bottom: 1rem;
     font-family: Montserrat;
 }
@@ -226,8 +227,8 @@ h1 {
   margin-top: 1rem;
     border: 2px solid rgba(255, 255, 255, 0.316);
     display: inline-block;
-    background: var(--color-accent);
-    color: var(--color-surface);
+    background-color:var(--top-link-color);
+    color: var(--dark-color);
      letter-spacing: var(--spacing);
     cursor: pointer;
     transition: var(--transition);
@@ -241,10 +242,11 @@ h1 {
    }
    .btn, button#button, button#contactbutton {
         outline: 1px solid var(--clr-4);
-    padding: .7rem 1.5rem;
+        padding: .7rem 1.5rem;
+        background-color:var(--top-link-color);
         border-radius: 0;
         width: 100%;
-        color: var(--color-surface);
+        color: var(--dark-color);
    }
 
    .fa-bars {
@@ -327,17 +329,17 @@ a.top-link {
   text-decoration: none;
   background: var(--top-link-color);
   border-radius: 50%;
-  color: var(--color-surface);
+  color: var(--dark-color);
   cursor: pointer;
   animation: bounce .3s ease-in-out infinite;
-  width: 50px;
+  width: 40px;
   visibility: hidden;
-  height: 50px;
+  height: 40px;
   display: grid;
   place-content: center;
   position: fixed;
   right: 30px;
-  bottom: 5rem;
+  bottom: 8rem;
 }
 a.top-link:hover {
   color: var(--color-surface);
@@ -394,15 +396,8 @@ a.show-link {
 
 }
  #service-btn {
-  box-shadow: var(--light-shadow);
-  cursor: pointer;
-      border: 2px solid rgba(255, 255, 255, 0.316);
-
-  display: block;
-   color: var(--color-surface);
-  padding: .7rem 1.5rem;  
-  background: var(--color-accent);
-text-decoration: underline;
+   cursor: pointer;
+   border: 2px solid rgba(255, 255, 255, 0.316);
 transition: var(--transition);
  }
  #service-btn:hover, button#button:hover{
@@ -613,7 +608,30 @@ section.map {
 .section {
   padding-bottom: 10rem;
 }
+
+/* COURSE STYLE */
  
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    bottom: 30px;
+    font-size: 1rem;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
+}
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
 /* media queries for Tablet devices */
 @media screen and  (max-width:768px) {
   .call-button{

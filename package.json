@@ -22,6 +22,7 @@
     "helmet": "^8.1.0",
     "mongodb": "^6.17.0",
     "mongoose": "^8.15.1",
+    "nodemailer": "^7.0.3",
     "path": "^0.12.7"
   },
   "devDependencies": {
