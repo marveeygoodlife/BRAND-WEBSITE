@@ -15,9 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link rel="stylesheet" href="/form.css">
+    <link rel="stylesheet" href="/style.css"> 
     <link rel="stylesheet" href="/images/weblogo_Images/mgl-logo.css">
     <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
         <title>MGL Tech Hub | Course Registration</title>
@@ -76,8 +74,8 @@ viewBox="0 0 3439.58 661.46"
     <main role="main">
         <div class="titl">
                     <h1 class="courseh1">Learn Tech Skills That Matter</h1>
-                    <h2>Practical digital course for kids, students, and adults - learn by doing.</h2>
-                    <p>Whether you're just starting out or want to sharpen your digital skills, <abbr title="Marveey GoodLife">MGL</abbr> Tech Hub offers practical, hands-on training for all levels - kids, students, and adults.</p>
+                     <p>
+                        Practical digital course for kids, students, and adults - learn by doing. <br> Whether you're just starting out or want to sharpen your digital skills, <abbr title="Marveey GoodLife">MGL</abbr> Tech Hub offers practical, hands-on training for all levels - kids, students, and adults.</p>
         </div>
         <!-- Available courses -->
         <section id="courses">
@@ -183,14 +181,14 @@ Learn essential computer skills and build real websites from scratch. Whether yo
      <ul class="form-grid">
     <li  >
         <label for="firstname">First Name:</label>
-        <input type="text" name="firstname" id="firstname" placeholder="First Name"   autocomplete="name"  aria-labelledby="firstnameError" required >
+        <input type="text" name="firstname" id="firstname" placeholder="First Name"   autocomplete="given-name"  aria-labelledby="firstnameError" required autocorrect="on" aria-autocomplete="both" >
         <div id="firstnameError" class="error-message" aria-live="polite"></div>
     </li>
     
     <li >
         <label for="lastname">Last Name:</label>
-        <input type="text" name="lastname" id="lastname" placeholder="Last Name"   autocomplete="name" 
-        inputmode="kana-name"  aria-describedby="lastnameError" required>
+        <input type="text" name="lastname" id="lastname" placeholder="Last Name"   autocomplete="family-name" 
+        inputmode="kana-name"  aria-describedby="lastnameError" required autocorrect="on" aria-autocomplete="both">
         <div id="lastnameError" class="error-message" aria-live="polite"></div>
     </li>
     
@@ -202,7 +200,7 @@ Learn essential computer skills and build real websites from scratch. Whether yo
      
     <li>
         <label for="telephone">Phone Number</label>
-        <input type="tel" name="telephone" id="telephone" placeholder="  Number"   autocomplete="tel" inputmode="tel" maxlength="15"  pattern="[\d\s\-\+\(\)]*" aria-labelledby="telephoneError" required>
+        <input type="tel" name="telephone" id="telephone" placeholder="  Number"   autocomplete="tel" inputmode="tel" maxlength="15"  pattern="[\d\s\-\+\(\)]*" aria-labelledby="telephoneError" required autocorrect="on" aria-autocomplete="both">
         <div id="telephoneError" class="error-message" aria-live="polite"></div>
     </li>
     </ul>
@@ -286,63 +284,19 @@ Learn essential computer skills and build real websites from scratch. Whether yo
     <label>
         Country 
         <span span class="red">*</span>
-        <select id="country" name="country" autocomplete="country" aria-labelledby="countryError" required>
+        <select id="country" name="country" autocomplete="country-name" aria-labelledby="countryError" required>
             <option value="" selected disabled>Select country</option>
             <optgroup label="Africa">
-    <option value="Algeria">Algeria</option>
-    <option value="Angola">Angola</option>
     <option value="Benin">Benin</option>
-    <option value="Botswana">Botswana</option>
-    <option value="Burkina Faso">Burkina Faso</option>
-    <option value="Burundi">Burundi</option>
-    <option value="Cabo Verde">Cabo Verde</option>
-    <option value="Cameroon">Cameroon</option>
-    <option value="Central African Republic">Central African Republic</option>
+     <option value="Burkina Faso">Burkina Faso</option>
     <option value="Chad">Chad</option>
-    <option value="Comoros">Comoros</option>
-    <option value="Congo (Brazzaville)">Congo (Brazzaville)</option>
-    <option value="Congo (Kinshasa)">Congo (Kinshasa)</option>
-    <option value="Djibouti">Djibouti</option>
-    <option value="Egypt">Egypt</option>
-    <option value="Equatorial Guinea">Equatorial Guinea</option>
-    <option value="Eritrea">Eritrea</option>
-    <option value="Eswatini">Eswatini</option>
-    <option value="Ethiopia">Ethiopia</option>
-    <option value="Gabon">Gabon</option>
-    <option value="Gambia">Gambia</option>
     <option value="Ghana">Ghana</option>
-    <option value="Guinea">Guinea</option>
-    <option value="Guinea-Bissau">Guinea-Bissau</option>
-    <option value="Ivory Coast">Ivory Coast</option>
     <option value="Kenya">Kenya</option>
-    <option value="Lesotho">Lesotho</option>
-    <option value="Liberia">Liberia</option>
-    <option value="Libya">Libya</option>
-    <option value="Madagascar">Madagascar</option>
-    <option value="Malawi">Malawi</option>
     <option value="Mali">Mali</option>
-    <option value="Mauritania">Mauritania</option>
-    <option value="Mauritius">Mauritius</option>
-    <option value="Morocco">Morocco</option>
-    <option value="Mozambique">Mozambique</option>
-    <option value="Namibia">Namibia</option>
     <option value="Niger">Niger</option>
     <option value="Nigeria">Nigeria</option>
-    <option value="Rwanda">Rwanda</option>
-    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-    <option value="Senegal">Senegal</option>
-    <option value="Seychelles">Seychelles</option>
-    <option value="Sierra Leone">Sierra Leone</option>
-    <option value="Somalia">Somalia</option>
     <option value="South Africa">South Africa</option>
-    <option value="South Sudan">South Sudan</option>
-    <option value="Sudan">Sudan</option>
     <option value="Tanzania">Tanzania</option>
-    <option value="Togo">Togo</option>
-    <option value="Tunisia">Tunisia</option>
-    <option value="Uganda">Uganda</option>
-    <option value="Zambia">Zambia</option>
-    <option value="Zimbabwe">Zimbabwe</option>
     <option value="Other">Other</option>
   </optgroup>
 
@@ -394,7 +348,7 @@ Learn essential computer skills and build real websites from scratch. Whether yo
     </main>
     
     <!-- footer section -->
-    <footer role="contentinfo"  class="section">
+    <footer role="contentinfo">
          <hr>
       <div class="two-column">
   <!-- NAV LLINKS -->

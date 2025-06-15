@@ -8,6 +8,8 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
+    background-color: var(--color-surface);
+
  }
  form:hover {
       box-shadow: 0 0  10px rgba(0, 0, 0, 0.5);
@@ -15,7 +17,7 @@
 .form-buttons button {
     padding: 10px 20px;
     margin: 10px 0 0;
-    background: #2c3e50;
+    background-color: var( --accent-bg-color);
     color: white;
     border: none;
     border-radius: 4px;
@@ -26,13 +28,18 @@ textarea {
      display: block;
 }
 /* =====SELECT STYLE========= */
-input, textarea, button,select {
+input, textarea, button,select, optgroup {
     width: 100%;
     margin-bottom: 15px;
     padding: 10px;
-     background-color: #fff;
-     outline: none;
+    background-color: #fff;
+    font-size: 100%;
+    margin: 0;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-weight: 400;
+    border-radius: 5px;
 }
+ 
 input , select{
     border: none;
     border-bottom:  1px solid var(--color-input-border);
@@ -45,6 +52,7 @@ h1.courseh1 {
   text-transform: uppercase;
   text-align: center;
   margin:3rem auto;
+  color: var(--color-text-primary);
 }
  
 .checkbox {
@@ -52,25 +60,25 @@ h1.courseh1 {
     margin-right: .2rem;
 }
 /* ===SELECT STYLE END=======*/
-.wchatBtn, .ctabtn {
-    display: block;
+  .ctabtn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    background: var(--accent-bg-color);
+    color: #fff;
     text-decoration: none;
-    padding: 10px 12px;
-     border: #2c3e50;
-    text-wrap-mode: nowrap;
-    color: black;
-     margin: 1rem auto;
-    background-color:var(--top-link-color);
-    text-align: center;
+    border:2px inset #2c3e50;
     transition: var(--transition);
 }
-.wchatBtn:hover, .ctabtn:hover {
-    color: black;
+.ctabtn:hover {
+    color: white;
+    background-color: #005bb5;
 }
 
 .ctabtn {
-    width: 35%;
-    text-overflow: hidden;
+display: flex;
+justify-content: center;
+grid-auto-rows: 2rem;
+margin: 2rem 0;
 }
 #connect {
     padding: .6em;
@@ -92,62 +100,54 @@ input[type="date"] {
 }
 .error-message {
     color: var(--warning);
-    font-size: .60em;
-    font-weight: bold;
-    margin-top: 4px;
+    font-size: 0.85em;
 }
 /* =====INPUT STYLE END===== */
   
  /*======FIELDSET AND UL STYLE====== */
 fieldset {
-    margin: 0;
+    margin: 1.5rem  0;
     border:  none;
+    padding: 0;
 }
 
-form ul { 
+.form-grid { 
     display: grid;
     grid-template-columns: 1fr ;
-    grid-template-rows: auto;
-  }
+    gap: 1rem;
+    padding: 0;
+   }
 form ul li {
     list-style-type: none;
  }
  
-label, legend {
-    display: block;
-    text-align: left;
-     padding: 0;
-    font-size: 1rem;
+label{
+font-weight: 600; }
+legend {
     font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
 
- }
-/*  #courses{
-    text-align: center;
- } */
- #courses, .twocolumn-grid {
+  .twocolumn-grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-columns: auto;
     gap: 2rem;
  }
- #courses article  div.paragraph  p {
+ .paragraph  p {
 text-align: left;
-display: block;
  }
- #courses article  div.paragraph  {
-margin-top: 1rem;
+ .course {
+         padding: 1.5rem;
+        background-color: var(--color-surface);
  }
  #courses   h4 {
     text-align: left;
     padding: 0;
     margin-left: 0;
  }
- 
- #courses article {
-    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
-    width: 100%;
-    padding: 20px;
- }
+
  #courses article  ul li {
     margin-left: 1.4rem;
  }
@@ -156,6 +156,7 @@ margin-top: 1rem;
  text-transform: uppercase; }
  p.justify {
     text-align: justify;
+    color: var(--color-text-primary);
  }
 
 /*======FIELDSET STYLE END=====*/
@@ -201,28 +202,39 @@ ul.terms   {
 }
 
 @media screen and (max-width:600px) {
- .form-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
- }
+ 
  .formp, label, input, select, .btn {
     font-size: 1rem;
  }
-    button#button {
-        width: 100%;
-    }
+ 
 }
 
 @media screen and (min-width: 1024px) {
     form {
-        max-width: 700px;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     }
     textarea {
         max-width: unset;
     }
+    textarea, input, select {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
     .form-grid {
     grid-template-columns: repeat(2, 1fr) ;
+    gap: 1.5rem;
+ }
+ .companyname, .duration {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    padding: 0;
  }
  .formp, label, input, select, .btn {
     font-size: 1.3rem;
@@ -230,5 +242,36 @@ ul.terms   {
  .twocolumn-grid {
       grid-template-columns: repeat(2, 1fr);
   }
- 
+ .title {
+    max-width: 1000px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 2rem;
+ }
+ .course {
+     padding: 1.5rem;
+    border-radius: 8px;
+    transition: var(--transition);
+    box-shadow: 0 0  10px rgba(0, 0, 0, 0.5);
+
+ }
+ .course:hover {
+           box-shadow: 0 0  10px rgba(0, 0, 0, 0.5);
+
+ }
+ .course h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+ }
+ .course ul {
+    padding-left: 1.25rem;
+ }
+ .paragraph p {
+    margin: 0.3rem 0;
+    color: var(--color-text-primary);
+  }
+.error-message {
+     font-size: 1em;
+}
 }
