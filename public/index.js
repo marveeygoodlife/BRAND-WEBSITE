@@ -24,7 +24,7 @@ const currentTheme = localStorage.getItem('theme');
    if (currentTheme) {
       body.classList.add(currentTheme);
    }
- 
+ /* DARK MODE & NAV HEIGHT */
 window.addEventListener('DOMContentLoaded', () => { 
    /* DARK MODE TOGGLE */
  themeToggle.addEventListener("click", ()=>{
@@ -67,119 +67,7 @@ const navheight = nav.getBoundingClientRect().height;
  }
 })
 
-/* ENROLLMENT FORM VALIDATION */
-const enrolmentForm = document.getElementById("myform");
-const submitBtn = document.querySelector("button");
- 
-if (enrolmentForm) {
-document.getElementById("myform").addEventListener("submit", (e)=>{
-e.preventDefault();
-/* fieldset 1 (user details) */
-const firstname = document.querySelector("#firstname").value.trim(); const firstnameError = document.getElementById("firstnameError");
 
-const lastname = document.querySelector("#lastname").value.trim(); const lastnameError = document.getElementById("lastnameError");
-
-const email = document.querySelector("#email").value.trim(); const emailError = document.getElementById("emailError");
-
-const phonenumber = document.querySelector("#telephone").value.trim(); const telephoneError = document.getElementById("telephoneError");
-
-/* fieldset 2 (work experience) */
-const selectstudent = document.querySelector("#studentoption").value.trim();
-const companyname = document.querySelector("#companyname").value.trim();
-const role = document.querySelector("#role").value.trim();
-const jobyears = document.querySelector("#jobyears").value.trim();
-
-/* fieldset 3(schedule program) */
-const dateinput = document.querySelector("#date").value.trim();
-
-/* fieldset 4 (register program) */
-const registerprogram = document.querySelector("#registerprogram").value.trim(); const registerError = document.getElementById("registerError");
-
-const internshipduration = document.querySelector("#duration").value.trim(); const internError = document.getElementById("internError");
-
-const country = document.querySelector("#country").value.trim(); const countryError = document.getElementById("countryError");
-
-/* fieldset 5 (find us) */
-const knowus = document.querySelector("#connect").value.trim();
-
-const checkbox = document.querySelector("#terms").checked; const checkError = document.getElementById("checkError"); 
-
-/* clear box */
-firstnameError.textContent = "";
-lastnameError.textContent = "";
-emailError.textContent = "";
-telephoneError.textContent = "";
-registerError.textContent = "";
-internError.textContent = "";
-countryError.textContent = "";
-checkError.textContent = "";
-
-/* validate all inputs */
-if (!firstname) {
-firstnameError.textContent = "Enter firstname";
-  valid = false;
-  return;
- }
-if (!lastname) { 
-lastnameError.textContent ="Enter Lastname";
-   valid = false;
-   return;
-}
-if (!email) {
-emailError.textContent = "Enter Email";
-   valid = false;
-   return;
-}
-if (!phonenumber) {
-telephoneError.textContent = "Enter Telephone  Number";
-   valid = false;
-   return;
-}
- 
-if (!registerprogram) {
-registerError.textContent = "choose program";
-   valid = false;
-   return;
-}
-if (!internshipduration) {
-internError.textContent = "Select duration";
-   valid = false;
-   return;
-}
-if (!country) {
-countryError.textContent = "Select Country";
-   valid = false;
-   return;
-}
-if (!checkbox) {
-checkError.textContent = "Select terms";
-   valid = false;
-   return;
-}
-
-const userData = {
-   firstname,
-   lastname,
-   email,
-   phonenumber,
-   selectstudent,
-   companyname,
-   role,
-   jobyears,
-   internshipduration,
-   dateinput,
-   registerprogram,
-   country,
-   knowus,
-   checkbox
-}
-console.log("enrollment Form Data", userData)
-if (valid) {
-   enrolForm.submit();
-}
-
-});
-} 
 /* CONTACT FORM VALIDATION */
 const contactform = document.getElementById("contactform");
 const contactbutton = document.getElementById("contactbutton");
@@ -255,6 +143,5 @@ link.addEventListener("click", (e) => {
 
   });
 });
-
 
 

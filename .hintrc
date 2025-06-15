@@ -15,7 +15,8 @@
       {
         "ignore": [
           "text-wrap-mode",
-          "text-wrap-mode: nowrap"
+          "text-wrap-mode: nowrap",
+          "text-size-adjust"
         ]
       }
     ],
@@ -27,5 +28,11 @@
         ]
       }
     ]
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not firefox <= 133",
+    "not safari <= 18.2"
+  ]
 }

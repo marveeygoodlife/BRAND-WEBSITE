@@ -1,52 +1,98 @@
- /* FORM STYLE */
-form#myform, #contactform {
-    border-radius: 5px;
-     max-width: 700px;
-    margin: 2rem auto;
-    padding: 1rem;
-    transition: box-shadow .3s ease;
-}
-form#myform:hover, #contactform:hover {
-      box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.5);
+
+ form {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    background-color: var(--color-surface);
+
+ }
+ form:hover {
+      box-shadow: 0 0  10px rgba(0, 0, 0, 0.5);
+} 
+.form-buttons button {
+    padding: 10px 20px;
+    margin: 10px 0 0;
+    background-color: var( --accent-bg-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+     cursor: pointer;
 }
 /* input style */
-
+textarea {
+     display: block;
+}
 /* =====SELECT STYLE========= */
-
-select, input {
+input, textarea, button,select, optgroup {
     width: 100%;
-    border-radius: .3rem;
-    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 10px;
     background-color: #fff;
-    border: 1px solid var(--color-input-border);
-    height: 35px;
- }
+    font-size: 100%;
+    margin: 0;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-weight: 400;
+    border-radius: 5px;
+}
+ 
+input , select{
+    border: none;
+    border-bottom:  1px solid var(--color-input-border);
+}
  select option {
     background-color: var(--dark-color);
     color: #fff;
 }
+h1.courseh1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin:3rem auto;
+  color: var(--color-text-primary);
+}
  
 .checkbox {
     width: unset;
-    margin-right: .4rem;
+    margin-right: .2rem;
 }
 /* ===SELECT STYLE END=======*/
+  .ctabtn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    background: var(--accent-bg-color);
+    color: #fff;
+    text-decoration: none;
+    border:2px inset #2c3e50;
+    transition: var(--transition);
+}
+.ctabtn:hover {
+    color: white;
+    background-color: #005bb5;
+}
 
+.ctabtn {
+display: flex;
+justify-content: center;
+grid-auto-rows: 2rem;
+margin: 2rem 0;
+}
 #connect {
     padding: .6em;
 }
 ::placeholder{
-    color: var(--color-text-muted);
-    font-family: inherit;
-    font-size: .99rem;
-    padding: 0 0 0 5px;
+     font-family: inherit;
  }
 input:focus, select:focus, button:focus {
-border: 2px solid var( --color-input-border);
+    border: none;
+border-bottom: 2px solid var( --color-input-border);
 }
  
 input:hover, select:hover, button:hover {
-box-shadow: 0 0 2px 2px var( --light-shadow);
+box-shadow: 0 0 2px 2px var(--light-shadow);
 }
 input[type="date"] {
     width: 100%;
@@ -54,49 +100,67 @@ input[type="date"] {
 }
 .error-message {
     color: var(--warning);
-    font-size: .60em;
-    font-weight: bold;
-    margin-top: 4px;
+    font-size: 0.85em;
 }
 /* =====INPUT STYLE END===== */
   
  /*======FIELDSET AND UL STYLE====== */
 fieldset {
-    margin: 0;
+    margin: 1.5rem  0;
     border:  none;
-}
-.fieldset1 {
-    margin-bottom: 1.2rem;
+    padding: 0;
 }
 
-ul  { 
+.form-grid { 
     display: grid;
     grid-template-columns: 1fr ;
-    grid-template-rows: auto;
-    margin: 0;
-    gap:.2rem;
-    width: 100%;
-
- }
- li {
+    gap: 1rem;
+    padding: 0;
+   }
+form ul li {
     list-style-type: none;
-    width: 100%;
-    margin: 1rem auto;
-
  }
  
-label, legend {
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
+label{
+font-weight: 600; }
+legend {
     font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
 
+  .twocolumn-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+    gap: 2rem;
  }
-.flexlabel input {
-    display: flex;
-    flex-direction: row;
-}/*======FIELDSET STYLE END=====*/
+ .paragraph  p {
+text-align: left;
+ }
+ .course {
+         padding: 1.5rem;
+        background-color: var(--color-surface);
+ }
+ #courses   h4 {
+    text-align: left;
+    padding: 0;
+    margin-left: 0;
+ }
+
+ #courses article  ul li {
+    margin-left: 1.4rem;
+ }
+ b {
+    font-weight: bolder;
+ text-transform: uppercase; }
+ p.justify {
+    text-align: justify;
+    color: var(--color-text-primary);
+ }
+
+/*======FIELDSET STYLE END=====*/
+/* TERMS AND CONDITION */
 ul.terms   {
     display: inline-block;
     flex-direction: column;
@@ -105,55 +169,109 @@ ul.terms   {
 .owner {
     width: 100%;
 }
- 
-/*  */
  #flexlabel {
-    font-size: .65em;
-    margin-top: 1rem;
- }
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 /*=====FORM STYLE END===== */
  .red {
     color: red;
  }
- 
-.flexa {
-    margin: auto .4em;
-}
-label#flexlabel, .flexa  { 
-    display: inline-flex;
-    align-items: center;
- }
-@media screen and (max-width: 350px) {
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-}
- #error-message {
+#error-message {
     display: none;
  }
-@media screen and (min-width:600px) {
-    fieldset ul.form-grid {
-        width: 100%;
-    }   
-    label, legend {
-         font-size: 1.1em;
-     }
-    #flexlabel {
-        font-size: 1rem;
-      }
-    .error-message {
-      
-        font-size: 1em;
-         
-    }
-    ::placeholder {
-        font-size: 1.1em;
-    }
-    .formp {
-        font-size: 1.2em;
-    }
-    #flexlabel {
+ 
+/* FADE IN ANIMATION */
 
-        font-size: unset;
-     }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+   to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.form-animate {
+    animation: fadeIn 1.2s ease-out both ;
+}
+
+@media screen and (max-width:600px) {
+ 
+ .formp, label, input, select, .btn {
+    font-size: 1rem;
+ }
+ 
+}
+
+@media screen and (min-width: 1024px) {
+    form {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    textarea {
+        max-width: unset;
+    }
+    textarea, input, select {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .form-grid {
+    grid-template-columns: repeat(2, 1fr) ;
+    gap: 1.5rem;
+ }
+ .companyname, .duration {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0;
+ }
+ .formp, label, input, select, .btn {
+    font-size: 1.3rem;
+ }
+ .twocolumn-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+ .title {
+    max-width: 1000px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 2rem;
+ }
+ .course {
+     padding: 1.5rem;
+    border-radius: 8px;
+    transition: var(--transition);
+    box-shadow: 0 0  10px rgba(0, 0, 0, 0.5);
+
+ }
+ .course:hover {
+           box-shadow: 0 0  10px rgba(0, 0, 0, 0.5);
+
+ }
+ .course h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+ }
+ .course ul {
+    padding-left: 1.25rem;
+ }
+ .paragraph p {
+    margin: 0.3rem 0;
+    color: var(--color-text-primary);
+  }
+.error-message {
+     font-size: 1em;
+}
 }
