@@ -465,6 +465,7 @@ a.show-link {
 }
 .hero ul li {
   margin: 1rem auto;
+  text-align: justify;
 }
 .hero div h1,h2,h3,h4,h5, h6 {
   text-align: center;
