@@ -44,7 +44,6 @@ padding: 0;
   --accent-bg-color-hover:#0569ce ;
   --header-color: white;
 
-
   /* ul elements */
   --color-border:#DDDDDD;
   --color-input-bg: #FFFFFF;
@@ -68,7 +67,7 @@ padding: 0;
  /* dark-mode  color palette*/
  .dark-mode {
    /* background color */
-  --color-bg:#121212 ;
+  --color-bg: rgb(1, 18, 34) /* #121212 */ ;
   --color-bg-secondary:#1E1E1E;
   --color-surface:#1E1E1E;
 
@@ -78,9 +77,8 @@ padding: 0;
   --color-text-muted:#888888;
     --header-color: white;
 
-
   /* accent colors */
-  --color-accent:#1e73be;
+  --color-accent:white/* #1e73be */;
   --color-accent-hover:#357ABD;
   --btn-color:#718FC8;
   --btn-color-hover:#718fc8c7;
@@ -216,7 +214,7 @@ h4 {
   }
   nav {
     padding:  1rem .45rem;
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg);
   }
   .nav-header {
     align-items: center;
@@ -229,6 +227,10 @@ h4 {
   nav ul {
     margin: 0;
     padding: 0;
+  }
+  .png {
+    width: 100%;
+    height: auto;
   }
   nav ul li {
     display: block;
@@ -254,6 +256,7 @@ h4 {
    display: grid;
    place-content: center;
    min-height: 100vh;
+   width: 100%;
    text-align: center;
   }
   .fixed-navbar {
@@ -266,7 +269,7 @@ h4 {
     background: var(--color-bg);
   }
   p {
-    text-transform: capitalize;
+    text-transform:initial;
   }
 /* button style */
  a.btnwhite, button#contactbutton, .btn, #service-btn {
@@ -308,12 +311,14 @@ h4 {
 
 /* MAIN CONTENT STYLE START*/
 section { display: flex;
-  flex: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
      margin-bottom: 1rem;
      padding: 1rem;
+}
+section > article {
+   flex: auto;
 }
 main {
   padding: 1em;
@@ -351,10 +356,18 @@ margin-bottom: 1rem;}
  
 
 /* ABOUT SECTION STYLE */
+
+ div#aboutcontent{
+    display: flex;
+     flex-direction: column;
+    height:auto ;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
 #mission, #goals, #vision {
    border-radius: 1rem;
-   text-align: left;
-   padding: 1rem;
+    padding: 1rem;
     background: var(--color-input-bg);
     outline: 2px solid var(--color-text-muted);
   border: var(--color-border);
@@ -362,24 +375,20 @@ margin-bottom: 1rem;}
   height: auto;
   transition: var(--transition);
   box-shadow: var(--light-shadow);
- }
+  flex: auto;
+  }
   
 .article-content:hover {
  transform: var(--scale);
   box-shadow: var(--dark-shadow);
 }
-#mission p, #goals li, #vision p {
-   max-width: 30rem;
-}
+ 
 #mission h2, #goals h2, #vision h2 {
 margin-top: 1rem;
-text-transform: capitalize;}
- #goals{
-  margin-top: 2rem;
- }
- #vision {
-  margin-bottom: 2rem;
- }
+text-transform: uppercase;
+text-align: center;
+}
+
  #vision, #mission {
    border-top-left-radius: 3rem;
    border-bottom-right-radius: 3rem;
@@ -388,9 +397,7 @@ text-transform: capitalize;}
 #about,#service,#contact {
   height: auto;
 }
- .mission-statement{
-text-align: left;
-}
+ 
 /* back to top link */
 a.top-link { 
   z-index: -100;
@@ -734,12 +741,8 @@ background: transparent;
     margin-top: 1.5rem;
   }
   div#aboutcontent{
-    display: flex;
-     flex-direction: row;
-    height:auto ;
-    gap: 2rem;
+    flex-direction: row;
     justify-content: space-around;
-    align-items: center;
   }
   /* main */
   h1 {
@@ -776,10 +779,7 @@ h4 {
     align-items: center;
       margin: 0 auto;
    }
-  .mission-statement{
- text-align: center;
- padding: 10px;
-}
+
 #mission, #goals, #vision {
   flex: 1;
   text-overflow: hidden;
