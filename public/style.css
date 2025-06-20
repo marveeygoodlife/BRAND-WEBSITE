@@ -449,7 +449,31 @@ a.show-link {
     transform: translateY(0);
   }
 } */
+.hero div {
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: left;
+  max-width: 800px;
+}
+.hero div > p {
+  text-align: justify;
+  line-height: 1.5;
+}
 
+.hero ul li, ul li > p {
+  text-align: left;
+}
+.hero ul li {
+  margin: 1rem auto;
+}
+.hero div h1,h2,h3,h4,h5, h6 {
+  text-align: center;
+  margin: 1.5rem auto;
+}
+.hero div h1 {
+    color: var(--color-text-primary);
+
+}
   /* footer style */
 footer {
   position: static;
