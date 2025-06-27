@@ -337,7 +337,6 @@ p {
   text-align: justify;
 margin-bottom: 1rem;
 padding: 10px;
-
 }
 
 .digital-ol li {
@@ -871,8 +870,8 @@ padding:  1rem;
 }
 button.question-btn {
   font-size: 1.5rem;
-  /* background: transparent;
-  border-color: transparent; */
+  background: transparent;
+  border-color: transparent; 
   cursor: pointer;
   color: var(--color-gold);
   transition: var(--transition);
