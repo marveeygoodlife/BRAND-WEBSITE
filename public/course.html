@@ -72,13 +72,13 @@ viewBox="0 0 3439.58 661.46"
     </header>
         <!-- main content-->
     <main role="main">
-        <div class="titl">
-                    <h1 class="courseh1">Learn Tech Skills That Matter 🎯</h1>
+        <div class="title">
+                    <h1>Learn Tech Skills That Matter 🎯</h1>
                      <p>
                         Practical digital course for kids, students, and adults - learn by doing. <br> Whether you're just starting out or want to sharpen your digital skills, <abbr title="Marveey GoodLife">MGL</abbr> Tech Hub offers practical, hands-on training for all levels - kids, students, and adults.</p>
         </div>
         <!-- Available courses -->
-        <section id="courses">
+        <section id="courses" class="section-center">
             <!-- WEB DEVELOPMENT COURSE -->
              <h2>Our Available Courses</h2>
              <div class="twocolumn-grid">
@@ -158,17 +158,16 @@ viewBox="0 0 3439.58 661.46"
             </article>
             </div>
         </section>
-        <section>
+        <section  class="section-center">
             <h4>Want to join or ask questions❓</h4>
             <p>Use the button below to chat with us or register your spot.</p>
             <div class="cta">
-                <a href="#myform" class="ctabtn">Register Now</a> 
-                 <a href="https://wa.me/2347053902558"  title="Whatsapp us" role="link" class="ctabtn" rel="noopener noreferrer" target="_blank"> WhatsApp Us</a>
+                  <a href="https://wa.me/2347053902558"  title="Whatsapp us" role="link" class="ctabtn" rel="noopener noreferrer" target="_blank"> WhatsApp Us</a>
 
             </div>
         </section>
         <!-- FORM ENROLLMENT -->
-         <section id="contact" class="section" > 
+         <section id="contact" class="section-center" > 
     <article class="content" role="article">
                     <div class="mainContainer">
                         <h2> Join Our Computer & Web Development 🏫</h2>
@@ -224,7 +223,7 @@ Learn essential computer skills and build real websites from scratch. Whether yo
         <input type="text" name="role" id="role" placeholder="Role"autocomplete="name" class="Owner" aria-label=" Enter job Role">
     </li>
     <li>
-        <select name="jobyears" class="jobyears owner" aria-label="Select years of working experience" id="jobyears" required aria-labelledby="jobyears">
+        <select name="jobyears" class="jobyears owner" aria-label="Select years of working experience" id="jobyears" required aria-labelledby="jobyearsError">
         <option value="" selected disabled>Since</option>
         <option value="1  year"> 0 - 1 Years</option>
         <option value="2 years"> 1 - 2 Years</option>
@@ -328,8 +327,8 @@ Learn essential computer skills and build real websites from scratch. Whether yo
      <div role="alert" aria-live="assertive" id="error-message">Please fill out all required fields.</div>
      </fieldset>
      <div class="form-buttons">
-        <button type="button" class="prev-btn" onclick="prevStep()">previous</button>
-        <button type="button" class="next-btn" onclick="nextStep()">next</button>
+        <button type="button" class="prev-btn bbtn" onclick="prevStep()">previous</button>
+        <button type="button" class="next-btn bbtn" onclick="nextStep()">next</button>
      </div>
    <!--  
         Submit Enrollment
@@ -375,10 +374,10 @@ Learn essential computer skills and build real websites from scratch. Whether yo
                 <div class="footer-title">
               <h2 role="heading">HELP & GUIDE</h2>
                 <ul class="footer-links">
-                     <li role="listitem"><a href="/terms.html"  role="link" target="_blank" rel="noreferrer nofollow noopener">Term of use</a></li>
-                    <li role="listitem"><a href="/privacy.html"  role="link" target="_blank" rel="noreferrer nofollow noopener">Privacy policy</a>
+                     <li role="listitem"><a href="/terms.html"  role="link">Term of use</a></li>
+                    <li role="listitem"><a href="/privacy.html"  role="link">Privacy policy</a>
 </li>
-                    <li role="listitem"><a href="#"  target="_blank" role="link" target="_blank" rel="noreferrer nofollow noopener">FAQ</a></li>
+                    <li role="listitem"><a href="/faq.html" role="link">FAQ</a></li>
                 </ul>
                  </div>
              </div>
@@ -451,7 +450,7 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 </div>
          <!-- javascript -->
-          <script src="https://unpkg.com/scrollreveal"></script>
+           
          <script src="/index.js"></script>
          <script>
             let currentStep = 0;
