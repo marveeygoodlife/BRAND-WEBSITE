@@ -106,11 +106,12 @@ viewBox="0 0 3439.58 661.46"
                     Welcome to the MGL Tech Hub FAQ page! Whether you're here to learn, design, or get digital help, we've answered your most common questions below. Still curious? <a a href="https://wa.me/2347053902558" role="link" class="wchatBtn">Contact us</a> — we’re happy to help!
                 </p>
             </div>
+            <!-- FAQ QUESTION -->
             <!-- first question -->
           <article class="question">
             <div class="question-title">
-                <p>💻 1. What services do you offer?</p>
-                <button type="button" class="question-btn" role="button" title="buttons" aria-label=" FAQ toggle buttons">
+                <p id="question1-label">💻 1. What services do you offer?</p>
+<button aria-expanded="false" aria-controls="answer1" class="question-btn" role="button" title="buttons" aria-labelledby="question1-label" onclick="toggleFAQ(this, 'answer1')">
                     <span class="plus-icon">
                         <i class="far fa-plus-square"></i>
                     </span>
@@ -119,7 +120,7 @@ viewBox="0 0 3439.58 661.46"
                     </span>
                 </button>
             </div>
-            <div class="question-text">
+            <div class="question-text" id="answer1" hidden role="region" aria-labelledby="question1-label">
                 <p>
                     We offer: 
                 </p>
@@ -135,8 +136,8 @@ viewBox="0 0 3439.58 661.46"
             <!-- second question -->
           <article class="question">
             <div class="question-title">
-                <p>🎓 2. Who can enroll in your training programs?</p>
-                <button type="button" class="question-btn" role="button" title="buttons" aria-label=" FAQ toggle buttons">
+                <p id="question2-label">🎓 2.  Who can enroll in your training programs?</p>
+                <button  aria-expanded="false" aria-controls="answer2" class="question-btn" role="button" aria-label="question2-label" onclick="toggleFAQ(this, 'answer2')">
                     <span class="plus-icon">
                         <i class="far fa-plus-square"></i>
                     </span>
@@ -145,7 +146,7 @@ viewBox="0 0 3439.58 661.46"
                     </span>
                 </button>
             </div>
-            <div class="question-text">
+            <div class="question-text" id="answer2" hidden role="region" aria-labelledby="question2-label">
                 <p>
                    Anyone! Whether you're a beginner, student, or adult, our courses are designed to be practical and beginner-friendly. We specialize in teaching children too.
                 </p>
@@ -154,8 +155,8 @@ viewBox="0 0 3439.58 661.46"
             <!-- third question -->
           <article class="question">
             <div  class="question-title">
-                <p>📅 3. How long do your training programs last?</p>
-                <button type="button" class="question-btn" role="button" title="buttons" aria-label=" FAQ toggle buttons">
+                <p id="question3-label">📅 3. How long do your training programs last?</p>
+                <button aria-expanded="false" aria-controls="answer3" class="question-btn" role="button"  aria-labelledby=" question3-label" onclick="toggleFAQ(this, 'answer3')"  >
                     <span class="plus-icon">
                         <i class="far fa-plus-square"></i>
                     </span>
@@ -164,7 +165,7 @@ viewBox="0 0 3439.58 661.46"
                     </span>
                 </button>
             </div>
-            <div class="question-text">
+            <div class="question-text" id="answer3" hidden role="region" aria-labelledby="question3-label">
                 <p>
                     Our structured course runs for 3 months, covering the basics and core computer skills. We also offer custom and short-term sessions based on your needs.
                 </p>
@@ -173,9 +174,9 @@ viewBox="0 0 3439.58 661.46"
             <!-- fourth question -->
           <article class="question">
             <div class="question-title">
-                <p>🖥️ 4. Do you offer online classes?</p>
-                <button type="button" class="question-btn" role="button" title="buttons" aria-label=" FAQ toggle buttons">
-                    <span class="plus-icon">
+                <p id="question4-label">🖥️ 4. Do you offer online classes?</p>
+                <button aria-expanded="false" aria-controls="answer4" class="question-btn" role="button"   aria-label="question4-label" onclick="toggleFAQ(this, 'answer4')" >
+                    <span class="plus-icon"> 
                         <i class="far fa-plus-square"></i>
                     </span>
                     <span class="minus-icon">
@@ -183,7 +184,7 @@ viewBox="0 0 3439.58 661.46"
                     </span>
                 </button>
             </div>
-            <div class="question-text">
+            <div class="question-text" id="answer4" role="region" hidden aria-labelledby="question4-label">
                 <p>
                     Yes! We provide both physical and virtual training options. You can learn from anywhere via Zoom, Google Meet, or our website’s learning portal.
                 </p>
@@ -192,8 +193,8 @@ viewBox="0 0 3439.58 661.46"
             <!-- fifth question -->
           <article class="question">
             <div  class="question-title">
-                <p>💼 5. Can I hire you to build a website or design a flyer?</p>
-                <button type="button" class="question-btn" role="button" title="buttons" aria-label=" FAQ toggle buttons">
+                <p id="question5-label">💼 5. Can I hire you to build a website or design a flyer?</p>
+                <button  aria-expanded="false" aria-controls="answer5" class="question-btn" role="button"  aria-labelledby="question5-label" onclick="toggleFAQ(this, 'answer5')">
                     <span class="plus-icon">
                         <i class="far fa-plus-square"></i>
                     </span>
@@ -202,7 +203,7 @@ viewBox="0 0 3439.58 661.46"
                     </span>
                 </button>
             </div>
-            <div class="question-text">
+            <div class="question-text" id="answer5" role="region" hidden aria-labelledby="question5-label">
                 <p>
                     Absolutely! We offer affordable and creative branding solutions. Send us your project details via <a href="">WhatsApp</a> or use the <a href="">contact form</a>.
                 </p>
@@ -211,8 +212,8 @@ viewBox="0 0 3439.58 661.46"
             <!-- sixth question -->
           <article class="question">
             <div  class="question-title">
-                <p>🧒 6. Do you teach children how to use a computer?</p>
-                <button type="button" class="question-btn" role="button" title="buttons" aria-label=" FAQ toggle buttons">
+                <p id="question6-label">🧒 6. Do you teach children how to use a computer?</p>
+                <button aria-expanded="false" aria-controls="answer6" class="question-btn" role="button"  aria-labelledby="question5-label" onclick="toggleFAQ(this, 'answer6')">
                     <span class="plus-icon">
                         <i class="far fa-plus-square"></i>
                     </span>
@@ -221,7 +222,7 @@ viewBox="0 0 3439.58 661.46"
                     </span>
                 </button>
             </div>
-            <div class="question-text">
+            <div class="question-text" id="answer6" role="region" hidden aria-labelledby="question6-label"> 
                 <p>
                     Yes — we’re passionate about early digital literacy. Our classes for kids focus on basics, typing, safe browsing, and creative tools like Paint and PowerPoint.
                 </p>
@@ -230,8 +231,8 @@ viewBox="0 0 3439.58 661.46"
             <!-- seventh question -->
           <article class="question">
             <div  class="question-title">
-                <p>🕒 7. What are your working hours?</p>
-                <button type="button" class="question-btn" role="button" title="buttons" aria-label=" FAQ toggle buttons">
+                <p id="question7-label">🕒 7. What are your working hours?</p>
+                <button aria-expanded="false" aria-controls="answer7"  class="question-btn" role="button"  aria-labelledby="question7-label" onclick="toggleFAQ(this, 'answer7')">
                     <span class="plus-icon">
                         <i class="far fa-plus-square"></i>
                     </span>
@@ -240,7 +241,7 @@ viewBox="0 0 3439.58 661.46"
                     </span>
                 </button>
             </div>
-            <div class="question-text">
+            <div class="question-text" id="answer7" role="region" hidden aria-labelledby="question7-label">
                 <p>
                     We’re open:
 Monday to Saturday: 9 AM – 6 PM
@@ -251,8 +252,8 @@ Sundays: For special bookings or classes only.
             <!-- eight question -->
           <article class="question">
             <div  class="question-title">
-                <p>📍 8. Where are you located?</p>
-                <button type="button" class="question-btn" role="button" title="buttons" aria-label=" FAQ toggle buttons">
+                <p id="question8-label">📍 8. Where are you located?</p>
+                <button aria-expanded="false" aria-controls="answer8" class="question-btn" role="button" aria-labelledby="question8-label" onclick="toggleFAQ(this, 'answer8')">
                     <span class="plus-icon">
                         <i class="far fa-plus-square"></i>
                     </span>
@@ -261,7 +262,7 @@ Sundays: For special bookings or classes only.
                     </span>
                 </button>
             </div>
-            <div class="question-text">
+            <div  id="question8" role="region" aria-labelledby="question8-label" class="question-text">
                 <p>
                     You’ll find us at:
 Mount Pleasant Haven Estate, Katampe 1, Mpape, Abuja.
@@ -271,8 +272,8 @@ Mount Pleasant Haven Estate, Katampe 1, Mpape, Abuja.
             <!-- ninth question -->
           <article class="question">
             <div  class="question-title">
-                <p>📍 8. Where are you located?</p>
-                <button type="button" class="question-btn" role="button" title="buttons" aria-label=" FAQ toggle buttons">
+                <p id="question9-label">📄 9. Do you give certificate?</p>
+                <button aria-expanded="false" aria-controls="question9" class="question-btn" role="button"  aria-labelledby="question9-label" onclick="toggleFAQ(this, 'answer9')">
                     <span class="plus-icon">
                         <i class="far fa-plus-square"></i>
                     </span>
@@ -281,13 +282,11 @@ Mount Pleasant Haven Estate, Katampe 1, Mpape, Abuja.
                     </span>
                 </button>
             </div>
-            <div class="question-text">
+            <div class="question-text"  id="question9" role="region" aria-labelledby="question9-label">
                 <p>
-                    📞 Call/💬 WhatsApp:: 07053902558
-                </p>
-                <p>
-                    📧 Email: mgltechhub@outlook.com
-                </p>
+LYes! After a successful completion of each training session.              
+</p>
+                 
             </div>
           </article>
              
@@ -388,6 +387,18 @@ Mount Pleasant Haven Estate, Katampe 1, Mpape, Abuja.
           </div>
          <!-- javascript -->
                        <script src="/index.js"></script>
+                       <script>
+                        function toggleFAQ(button, answerId) {
+                            const content = document.getElementById(answerId);
+                            //check if FAq is currently open
+                            const isExpanded = button.getAttribute("aria-expanded") === true;
+
+                            //Toggle state
+                            //flips aria-expanded value, true = false, false = true
+                            button.setAttribute('aria-expanded', !isExpanded);
+                            //toggle answer visibility
+                        content.hidden = isExpanded;}
+                       </script>
                        
    </body>
 </html>
