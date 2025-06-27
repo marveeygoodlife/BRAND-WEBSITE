@@ -63,18 +63,22 @@ input , select{
     text-decoration: none;
     border: 2px solid var(--color-gold);
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    width: fit-content;
+
 }
 .ctabtn:hover {
     color: white;
     background-color: #005bb5;
 }
 
-.ctabtn {
-display: flex;
-justify-content: center;
-grid-auto-rows: 2rem;
-margin: 2rem 0;
-}
+ div.cta {
+    display: grid;
+    place-items: center;
+ }
 #connect {
     padding: .6em;
 }
