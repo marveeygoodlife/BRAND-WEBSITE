@@ -7,7 +7,6 @@
         <meta name="description" content="This is a computer training school, that specialize in education and teaching of digital skills, web develoment and computer literacy">
         <meta name="keyword" content="digital printing, website development, Html, Css, Javascript, computer training, MS office, typing">
         <link rel="stylesheet" href="/style.css">
-        <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous" defer></script>
         <link rel="shortcut icon" href="/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
@@ -18,15 +17,14 @@
    <body id="body">
         <!-- header -->
     <header class="nobanner" id="home">
-        <nav id="nav" role="navigation">
+        <nav id="nav">
             <div class="nav-center">
                 <div class="nav-header">
                     <!-- logo  -->
 <svg width="190" height="40" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="transparent" />
    <text x="100" y="30" font-size="1rem" text-anchor="middle" fill="#c59d5f">MglTechHub</text>
-  Sorry, your browser does not support inline SVG.  
-</svg> 
+ </svg> 
 <!-- darkmode -->
  <div class="toggle-container" id="themeToggle">
             <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -75,13 +73,12 @@
        
         <!--  CONTACT SECTION   -->
          <section id="contact"  class="section-center">
-            <div class="title">
                 <h2>contact us</h2>
-            </div>
             <!-- form article -->
             <article class="content">
+                <h3> We’d love to hear from you! </h3>
                     <p>
-                        We’d love to hear from you! Whether you’re interested in our training programs, need help with printing or digital services, or just have a question—feel free to reach out. Fill out the form below and we’ll get back to you shortly. Let’s help you take the next step with confidence!
+                       Whether you’re interested in our training programs, need help with printing or digital services, or just have a question—feel free to reach out. Fill out the form below and we’ll get back to you shortly. Let’s help you take the next step with confidence!
                     </p> 
                     <!-- contact form -->
                     <div class="formContainer">
@@ -92,13 +89,13 @@
      <ul id="form-grid">
     <li class="mtop">
         <label for="fullname">Full Name:</label>
-        <input type="text" name="fullname" id="fullname" placeholder="Your Name"   autocomplete="name"   aria-labelledby="fullnameError"  autocorrect="on" aria-autocomplete="both">
+        <input type="text" name="fullname" id="fullname" placeholder="Your Name"   autocomplete="name"   aria-labelledby="fullnameError" aria-autocomplete="both">
         <div id="fullnameError" class="error-message" aria-live="polite"></div>
     </li>
     <!-- email -->
      <li>
         <label for="contactemail">Email:</label>
-        <input type="email" name="contactemail" id="contactemail" placeholder="Your Email"   autocomplete="email" inputmode="email" aria-describedby="contactemailError" autocorrect="on" aria-autocomplete="both">
+        <input type="email" name="contactemail" id="contactemail" placeholder="Your Email"   autocomplete="email" aria-describedby="contactemailError" aria-autocomplete="both">
         <div id="contactemailError" class="error-message" aria-live="polite"></div>
     </li>
     </ul>
@@ -106,7 +103,7 @@
     
 <fieldset id="fieldset2"
 >
-        <label for="connect">
+        <label for="contactmessage">
         How can MGL Tech Hub assist you?
         </label>
         <textarea name="message" id="contactmessage" rows="5" placeholder="Type Your message here" aria-describedby="contactmessageError">   </textarea>
@@ -119,24 +116,21 @@
                     </div>
             </article>
          </section>
-         <section    class="map section-center">
-            <div class="title"><h2>Locate us here</h2></div>
+         <div  style="margin-top:5rem"   class="map section-center">
+            <h4>Locate us here</h4>
              <!-- map -->
           <div class="my-map"> 
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1009057.1045440112!2d7.2520211!3d8.914010499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1748635949741!5m2!1sen!2sng"    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="map" title="MGL tech Hub Location"></iframe>
           </div>
-         </section>
-         <!--  -->
-         <section  class="section-center">
+        </div>
+         
             <div>
                 <a href="https://wa.me/2347053902558" class="whatsappBtn" id="whatsappBtn" title="Whatsapp us"> <i class="fa-brands fa-whatsapp"></i></a>
      </div>
-         </section>
-          
         <a href="tel:+2347053902558" class="call-button"> Call us</a>
     </main>
   <!-- footer section -->
-    <footer role="contentinfo" >
+    <footer>
          <hr>
       <div class="two-column">
   <!-- NAV LLINKS -->
@@ -146,9 +140,9 @@
               <h2>ABOUT</h2>
              
                 <ul class="footer-links">
-                     <li role="listitem"><a href="/index.html#about"  >about us</a></li>
-                     <li role="listitem"><a href="/course.html" target="_parent">courses</a></li>
-                    <li role="listitem"><a href="/contact.html"  target="_parent">contact us</a></li>
+                     <li><a href="/index.html#about"  >about us</a></li>
+                     <li><a href="/course.html" target="_parent">courses</a></li>
+                    <li><a href="/contact.html"  target="_parent">contact us</a></li>
                 </ul>
                  </div>
              </div>
@@ -157,14 +151,13 @@
                 <div class="footer-title">
               <h2>HELP & GUIDE</h2>
                 <ul class="footer-links">
-                     <li role="listitem">
+                     <li>
                         <a href="/terms.html"  >Term of use</a>
                     </li>
-                    <li role="listitem">
+                    <li>
                         <a href="/privacy.html"  >Privacy policy</a>
-                        </a>
                     </li>
-                    <li role="listitem"><a href="/faq.html" >FAQ</a>
+                    <li><a href="/faq.html" >FAQ</a>
                     </li>
                 </ul>
                  </div>
@@ -177,26 +170,26 @@
    <ul class="footer-links">
     <li>
         <a href="https://x.com/marveeygoodlife" class="social-icon" title="Twitter" target="_blank" rel="noopener">
-        <i class="fa-brands fa-twitter" aria-label="twitter" ></i> Twitter
+        <i class="fa-brands fa-twitter" ></i> Twitter
     </a>
     </li>
     <li>
         <a href="https://www.linkedin.com/in/marvellous-ediagbonya-064b50147/"  class="social-icon"  title="LinkedIn" target="_blank" rel='noopener'>
-        <i class="fa-brands fa-linkedin" aria-label="linkedin"></i> LinkedIn
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
     </a>
     </li>
     <li>
         <a href="https://www.facebook.com/profile.php?id=61560254850421" class="social-icon" title="Facebook" target="_blank" rel="noopener">
-        <i class="fa-brands fa-facebook" aria-label="facebook" ></i>Facebook
+        <i class="fa-brands fa-facebook" ></i>Facebook
     </a>
     </li>
     <li>
-         <a href="https://www.instagram.com/mgltechhub/?hl=en" aria-label="instagram" title="Instagram" class="social-icon" target="_blank" rel="noopener">
+         <a href="https://www.instagram.com/mgltechhub/?hl=en" title="Instagram" class="social-icon" target="_blank" rel="noopener">
         <i class="fa-brands fa-instagram"></i>Instagram
     </a>
     </li>
     <li>
-        <a href="https://github.com/marveeygoodlife" aria-label="github" title="GitHub"  class="social-icon" rel="noopener" target="_blank"><i class="fa-brands fa-github"></i>GitHub
+        <a href="https://github.com/marveeygoodlife"   title="GitHub"  class="social-icon" rel="noopener" target="_blank"><i class="fa-brands fa-github"></i>GitHub
     </a>
     </li>
    </ul>
@@ -229,5 +222,7 @@
          <!-- javascript -->
                        <script src="/index.js"></script>
                        <script src="/form.js"></script>
+            <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
+
    </body>
 </html>

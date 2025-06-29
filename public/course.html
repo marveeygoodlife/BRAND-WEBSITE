@@ -12,21 +12,19 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
 <link rel="manifest" href="/favicon_io/site.webmanifest">
     <link rel="stylesheet" href="/style.css"> 
-     <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
         <title>MGL Tech Hub | Course Registration</title>
     </head>
    <body id="body">
         <!-- header -->
     <header class="nobanner" id="home">
-        <nav id="nav" role="navigation">
+        <nav id="nav">
             <div class="nav-center">
                 <div class="nav-header">
                     <!-- logo  -->
 <svg width="190" height="40" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="transparent" />
    <text x="100" y="30" font-size="1rem" text-anchor="middle" fill="#c59d5f">MglTechHub</text>
-  Sorry, your browser does not support inline SVG.  
-</svg> 
+ </svg> 
 <!-- darkmode -->
  <div class="toggle-container" id="themeToggle">
             <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -61,7 +59,7 @@
         </nav>
     </header>
         <!-- main content-->
-    <main role="main">
+    <main>
         <div class="title">
                     <h1>Learn Tech Skills That Matter 🎯</h1>
                      <p>
@@ -98,7 +96,7 @@
                  </div>
             </article>
             <!-- BASIC COMPUTER SKILLS -->
-             <article class="course" role="article">
+             <article class="course">
                  <h3> 💻Basic Computer Skills (adults and students)</h3>
                  <div>
                     <p  class="justify">
@@ -123,7 +121,7 @@
                  </div>
             </article>
             <!-- COMPUTER FOR KIDS -->
-             <article class="course" role="article">
+             <article class="course">
                  <h3> 💻Computer for kids (Ages 6 - 14)</h3>
                  <div>
                     <p  class="justify">
@@ -164,32 +162,32 @@
     <p class="formp">
 Learn essential computer skills and build real websites from scratch. Whether you're a complete beginner or looking to grow your tech knowledge, this course will guide you every step of the way. Fill out the form below to enroll 
 </p>
-    <form id="myform" action="/post" method="POST" aria-label="Enrollment Form"  form-animate>
+    <form id="myform" action="/post" method="POST" aria-label="Enrollment Form" autocomplete="on">
     <!-- FIELDSET 1 -->
     <fieldset class="fieldset1" >
      <ul class="form-grid">
     <li  >
         <label for="firstname">First Name:</label>
-        <input type="text" name="firstname" id="firstname" placeholder="First Name"   autocomplete="given-name"  aria-labelledby="firstnameError" required autocorrect="on" aria-autocomplete="both" >
+        <input type="text" name="firstname" id="firstname" placeholder="First Name"   autocomplete="given-name"  aria-labelledby="firstnameError" required  aria-autocomplete="both" >
         <div id="firstnameError" class="error-message" aria-live="polite"></div>
     </li>
     
     <li >
         <label for="lastname">Last Name:</label>
         <input type="text" name="lastname" id="lastname" placeholder="Last Name"   autocomplete="family-name" 
-        inputmode="kana-name"  aria-describedby="lastnameError" required autocorrect="on" aria-autocomplete="both">
+         aria-describedby="lastnameError" required  aria-autocomplete="both">
         <div id="lastnameError" class="error-message" aria-live="polite"></div>
     </li>
     
      <li>
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Email"   autocomplete="email" inputmode="email" aria-describedby="emailError" required>
+        <input type="email" name="email" id="email" placeholder="Email"   autocomplete="email" aria-describedby="emailError" required>
         <div id="emailError" class="error-message" aria-live="polite"></div>
     </li>
      
     <li>
         <label for="telephone">Phone Number</label>
-        <input type="tel" name="telephone" id="telephone" placeholder="  Number"   autocomplete="tel" inputmode="tel" maxlength="15"  pattern="[\d\s\-\+\(\)]*" aria-labelledby="telephoneError" required autocorrect="on" aria-autocomplete="both">
+        <input type="tel" name="telephone" id="telephone" placeholder="  Number"   autocomplete="tel" inputmode="tel" maxlength="15"  pattern="[\d\s\-\+\(\)]*" aria-labelledby="telephoneError" required  aria-autocomplete="both">
         <div id="telephoneError" class="error-message" aria-live="polite"></div>
     </li>
     </ul>
@@ -197,7 +195,7 @@ Learn essential computer skills and build real websites from scratch. Whether yo
     
     <!-- fieldset 2 -->
     <fieldset class="fieldset2">
-    <legend> I am a <span span class="red">*</span></legend>
+    <legend> I am a <span class="red">*</span></legend>
     <select class="studentoption" id="studentoption" name="occupation" aria-label="Select Profession" required aria-labelledby="studentoptionError">
     <option value="" selected disabled>Select</option>
     <option value="Student"> Student (fresher)</option>
@@ -207,10 +205,10 @@ Learn essential computer skills and build real websites from scratch. Whether yo
      <div id="studentoptionError" class="error-message" aria-live="polite"></div>
     <ul class="companyname">
     <li>
-        <input type="text" name="companyname" id="companyname" placeholder="Company"   autocomplete="name" class="Owner"aria-label="Enter Company Name" >
+        <input type="text" name="companyname" id="companyname" placeholder="Company"   autocomplete="name" class="Owner"  >
     </li>
     <li>
-        <input type="text" name="role" id="role" placeholder="Role"autocomplete="name" class="Owner" aria-label=" Enter job Role">
+        <input type="text" name="role" id="role" placeholder="Role" autocomplete="name" class="Owner" aria-label=" Enter job Role">
     </li>
     <li>
         <select name="jobyears" class="jobyears owner" aria-label="Select years of working experience" id="jobyears" required aria-labelledby="jobyearsError">
@@ -272,7 +270,7 @@ Learn essential computer skills and build real websites from scratch. Whether yo
     <li>
     <label>
         Country 
-        <span span class="red">*</span>
+        <span class="red">*</span>
         <select id="country" name="country" autocomplete="country-name" aria-labelledby="countryError" required>
             <option value="" selected disabled>Select country</option>
             <optgroup label="Africa">
@@ -288,12 +286,9 @@ Learn essential computer skills and build real websites from scratch. Whether yo
     <option value="Tanzania">Tanzania</option>
     <option value="Other">Other</option>
   </optgroup>
-
-   
-
         </select>
+        </label>
         <div id="countryError" class="error-message" aria-live="polite"></div>
-    </label>
     </li>
     </ul>
     <!-- FIELDSET 5  -->
@@ -303,14 +298,14 @@ Learn essential computer skills and build real websites from scratch. Whether yo
     <label for="connect"> 
         Please leave us a message
           </label> 
-        <textarea name="knowus" id="connect" required placeholder="Please share the name" aria-describedby="connectError" rows="5" cols="30"required ></textarea>
+        <textarea name="knowus" id="connect" required placeholder="Please share the name" aria-describedby="connectError" rows="5" cols="30"></textarea>
      <div id="connectError" class="error-message" aria-live="polite"></div>
 
     <!-- check box -->
      <label id="flexlabel"> 
-        <input type="checkbox" name="terms" class="checkbox"   id="terms" aria-labelledby="termsError" role="checkbox" required>
+        <input type="checkbox" name="terms" class="checkbox"   id="terms" aria-labelledby="termsError" required value="checkbox">
 
-        I have read and accept all <a href="#" class="flexa" > terms </a> & <a href="#" role="link"> policies</a> 
+        I have read and accept all <a href="#" class="flexa" > terms </a> & <a href="#"> policies</a> 
      </label>
      <div id="termsError" class="error-message" aria-live="polite"></div>
      <hr>
@@ -337,23 +332,23 @@ Learn essential computer skills and build real websites from scratch. Whether yo
     </main>
     
     <!-- footer section -->
-    <footer role="contentinfo">
+    <footer>
          <hr>
       <div class="two-column">
   <!-- NAV LLINKS -->
   
              <div class="foooter-links-container">
                 <div class="footer-title">
-              <h2 role="heading">ABOUT</h2>
+              <h2>ABOUT</h2>
              
                 <ul class="footer-links">
-                     <li role="listitem">
+                     <li>
                         <a href="/index.html#about" >about us</a>
                     </li>
-                     <li role="listitem">
+                     <li>
                         <a href="/course.html" target="_parent">courses</a>
                     </li>
-                    <li role="listitem">
+                    <li>
                         <a href="/contact.html"  target="_parent">contact us</a>
                     </li>
                 </ul>
@@ -362,12 +357,12 @@ Learn essential computer skills and build real websites from scratch. Whether yo
              <!-- help and guid4e -->
              <div class="foooter-links-container">
                 <div class="footer-title">
-              <h2 role="heading">HELP & GUIDE</h2>
+              <h2>HELP & GUIDE</h2>
                 <ul class="footer-links">
-                     <li role="listitem"><a href="/terms.html"  >Term of use</a></li>
-                    <li role="listitem"><a href="/privacy.html"  >Privacy policy</a>
+                     <li><a href="/terms.html"  >Term of use</a></li>
+                    <li><a href="/privacy.html"  >Privacy policy</a>
 </li>
-                    <li role="listitem"><a href="/faq.html" >FAQ</a></li>
+                    <li><a href="/faq.html" >FAQ</a></li>
                 </ul>
                  </div>
              </div>
@@ -378,26 +373,26 @@ Learn essential computer skills and build real websites from scratch. Whether yo
    <ul class="footer-links">
     <li>
         <a href="https://x.com/marveeygoodlife" class="social-icon" title="Twitter" target="_blank" rel="noopener">
-        <i class="fa-brands fa-twitter" aria-label="twitter" ></i> Twitter
+        <i class="fa-brands fa-twitter" ></i> Twitter
     </a>
     </li>
     <li>
         <a href="https://www.linkedin.com/in/marvellous-ediagbonya-064b50147/"  class="social-icon"  title="LinkedIn" target="_blank" rel='noopener'>
-        <i class="fa-brands fa-linkedin" aria-label="linkedin"></i> LinkedIn
+        <i class="fa-brands fa-linkedin" ></i> LinkedIn
     </a>
     </li>
     <li>
         <a href="https://www.facebook.com/profile.php?id=61560254850421" class="social-icon" title="Facebook" target="_blank" rel="noopener">
-        <i class="fa-brands fa-facebook" aria-label="facebook" ></i>Facebook
+        <i class="fa-brands fa-facebook"  ></i>Facebook
     </a>
     </li>
     <li>
-         <a href="https://www.instagram.com/mgltechhub/?hl=en" aria-label="instagram" title="Instagram" class="social-icon" target="_blank" rel="noopener">
+         <a href="https://www.instagram.com/mgltechhub/?hl=en" title="Instagram" class="social-icon" target="_blank" rel="noopener">
         <i class="fa-brands fa-instagram"></i>Instagram
     </a>
     </li>
     <li>
-        <a href="https://github.com/marveeygoodlife" aria-label="github" title="GitHub"  class="social-icon" rel="noopener" target="_blank"><i class="fa-brands fa-github"></i>GitHub
+        <a href="https://github.com/marveeygoodlife"  title="GitHub"  class="social-icon" rel="noopener" target="_blank"><i class="fa-brands fa-github"></i>GitHub
     </a>
     </li>
    </ul>
@@ -425,20 +420,7 @@ Learn essential computer skills and build real websites from scratch. Whether yo
           </a>
           </div>
               <!--Start of Tawk.to Script-->
-          <div>
-<script>
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/683acf9161be34190fe13771/1isirll48';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-</div>
+
          <!-- javascript -->
            
          <script src="/index.js"></script>
@@ -542,5 +524,19 @@ showToast('😞 Submission failed. please Try again.👌'. true);
    }, 3000);
   }
          </script>
+        <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
+<script>
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/683acf9161be34190fe13771/1isirll48';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+ 
    </body>
 </html>
