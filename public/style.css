@@ -8,22 +8,22 @@ padding: 0;
  /* FONT STYLE */
 @font-face {
     font-family: 'lato';
-    src: url(/fonts/Lato-Regular.ttf);
+    src: url(/Lato-Regular.ttf);
     font-weight: 700;
 }
 @font-face {
     font-family: 'lato';
-    src: url(/fonts/Lato-Light.ttf);
+    src: url(/Lato-Light.ttf);
     font-weight: 900;
 }
 @font-face {
     font-family: 'Montserrat';
-    src: url(/fonts/Montserrat-Bold.ttf);
+    src: url(/Montserrat-Bold.ttf);
     font-weight: 800;
 }
 @font-face {
     font-family: 'Montserrat';
-    src: url(/fonts/Montserrat-ExtraBold.ttf);
+    src: url(/Montserrat-ExtraBold.ttf);
     font-weight: 900;
 }
 /* light mode  color palette*/
@@ -692,7 +692,6 @@ section.map {
   .call-button{
     display: block;
   }  
-  
 }
 @media screen and (min-width:800px) {
    
@@ -715,6 +714,9 @@ h4 {
   nav {
 background: transparent;  
 
+}
+text {
+  font-size: 2rem;
 }
 .section-center {
   width: 95vw;
@@ -840,7 +842,6 @@ padding:  1rem;
 }
  
 }
-
 /* questions */
 .title {
   margin: 15vh 0 5rem 0;

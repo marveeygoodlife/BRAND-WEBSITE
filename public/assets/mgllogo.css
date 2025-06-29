@@ -1,6 +1,0 @@
-@charset "UTF-8";
-@font-face { font-family:"Century Gothic";font-variant:normal;font-weight:normal;src:url("#FontID1") format(svg)}
-@font-face { font-family:"Century Gothic";font-variant:normal;font-style:normal;font-weight:bold;src:url("#FontID0") format(svg)}
-.fil0 {fill:#da0000}
-.fnt1 {font-weight:normal;font-size:493.89px;font-family:'Century Gothic'}
-.fnt0 {font-weight:bold;font-size:493.89px;font-family:'Century Gothic'}
