@@ -15,7 +15,7 @@ This guide will walk you through the process of setting up SSH authentication wi
 
 ## What is SSH?
 
-SSH (Secure Shell) is a cryptographic network protocol that allows you to securely connect to GitHub. Using SSH keys, you can authenticate without supplying your username and personal access token at each visit.
+SSH (Secure Shell) is a cryptographic network protocol that allows you to securely connect to GitHub. Using SSH keys, you can authenticate without supplying your username and password at each visit.
 
 ## Prerequisites
 
@@ -152,7 +152,7 @@ ssh -T git@github.com
 You may see a warning like this:
 ```
 The authenticity of host 'github.com (IP ADDRESS)' can't be established.
-RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
 Are you sure you want to continue connecting (yes/no)?
 ```
 
