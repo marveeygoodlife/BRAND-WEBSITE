@@ -93,6 +93,44 @@ Javascript Interactivity
 - Always watch the site speed and test it's responsiveness to spot any issues.
 - Monitor the google search console to see any errors or if there's slow traffic to my page.
 
+## DEVELOPER SETUP
+
+### Getting Started with Git and GitHub
+
+If you're contributing to this project or learning web development, you'll need to set up Git and GitHub on your computer.
+
+#### Setting up SSH for GitHub
+
+For secure authentication with GitHub, we recommend using SSH keys instead of HTTPS. This allows you to push and pull code without entering your password every time.
+
+📖 **[Complete SSH Setup Guide](GITHUB_SSH_SETUP.md)** - Follow our step-by-step guide to:
+- Generate SSH keys
+- Add them to your GitHub account
+- Configure your local repository
+- Troubleshoot common issues
+
+#### Quick Start
+
+1. Clone this repository:
+```bash
+# Using SSH (recommended after setup)
+git clone git@github.com:marveeygoodlife/BRAND-WEBSITE.git
+
+# Or using HTTPS
+git clone https://github.com/marveeygoodlife/BRAND-WEBSITE.git
+```
+
+2. Install dependencies:
+```bash
+cd BRAND-WEBSITE
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
 ## RESULTS
 
 ## CONCLUSION
