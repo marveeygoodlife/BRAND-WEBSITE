@@ -15,7 +15,7 @@ This guide will walk you through the process of setting up SSH authentication wi
 
 ## What is SSH?
 
-SSH (Secure Shell) is a cryptographic network protocol that allows you to securely connect to GitHub. Using SSH keys, you can authenticate without supplying your username and password at each visit.
+SSH (Secure Shell) is a cryptographic network protocol that allows you to securely connect to GitHub. Using SSH keys, you can authenticate to GitHub without entering credentials at each visit.
 
 ## Prerequisites
 

@@ -101,7 +101,7 @@ If you're contributing to this project or learning web development, you'll need 
 
 #### Setting up SSH for GitHub
 
-For secure authentication with GitHub, we recommend using SSH keys instead of HTTPS. This allows you to push and pull code without entering your password every time.
+For secure authentication with GitHub, we recommend using SSH keys instead of HTTPS. This allows you to push and pull code without entering credentials every time.
 
 📖 **[Complete SSH Setup Guide](GITHUB_SSH_SETUP.md)** - Follow our step-by-step guide to:
 - Generate SSH keys
